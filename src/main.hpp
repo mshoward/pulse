@@ -15,7 +15,7 @@
 #include "control/control.hpp"
 #include "dataBucket/dataBucket.hpp"
 #include "MYSQL_Int/MYSQL_Int.hpp"
-#Include "scheduler/scheduler.hpp"
+#include "scheduler/scheduler.hpp"
 #include "sock_int/sock_int.hpp"
 
 
@@ -23,7 +23,7 @@
 
 //class definitions
 #ifdef PULSE_DEBUG
-#include "client/test.cpp"
+//#include "client/test.cpp"
 
 #endif
 
@@ -31,5 +31,5 @@
 #include "control/control.cpp"
 #include "dataBucket/dataBucket.cpp"
 #include "MYSQL_Int/MYSQL_Int.cpp"
-#Include "scheduler/scheduler.cpp"
+#include "scheduler/scheduler.cpp"
 #include "sock_int/sock_int.cpp"

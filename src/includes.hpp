@@ -3,7 +3,8 @@
 #include <iostream>
 #include <string>
 #include <sstream>
-
+#include <cstring>
+#include <thread>
 
 
 //linux includes
