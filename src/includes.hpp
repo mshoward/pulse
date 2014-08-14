@@ -4,12 +4,13 @@
 #include <string>
 #include <sstream>
 #include <cstring>
-#include <thread>
+//#include <thread>
 
 
 //linux includes
 ///sock_int requires:
 #include <stdio.h>
+#include <unistd.h>
 #include <sys/types.h> 
 #include <sys/socket.h>
 #include <netinet/in.h>

@@ -27,6 +27,8 @@ public:
 	int init();
 	
 	int start(int thisPort);
+	int acceptConnection();
+	int readOnceFromConnection();
 	
 	
 };

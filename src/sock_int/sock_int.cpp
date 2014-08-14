@@ -27,7 +27,7 @@ int sock_int::init()
 	serv_addr.sin_family = AF_UNIX;
 	serv_addr.sin_addr.s_addr = INADDR_ANY;
 	clilen = sizeof(cli_addr);
-	
+	return errorNo;
 }
 
 
@@ -44,11 +44,36 @@ int sock_int::start(int thisPort)
 		return errorNo;
 	}
 	listen(sockfd, 128);
+	return errorNo;
 }
 
 
-
-
+//errorNo = -3 on accepting connection error
+int sock_int::acceptConnection()
+{
+	newsockfd = accept(sockfd, (struct sockaddr *) &cli_addr, (unsigned int *) &clilen);
+	if (newsockfd < 0)
+	{
+		errorMsg = "Error accepting connection";
+		errorNo = -3;
+		return errorNo;
+	}
+	return errorNo;
+}
+//errorNo = -4 on reading from socket error
+int sock_int::readOnceFromConnection()
+{
+	n = read(newsockfd, buffer, 255);
+	if(n < 0)
+	{
+		errorMsg = "Error reading from socket";
+		errorNo = -4;
+		return errorNo;
+	}
+	std::string temp(buffer);
+	std::cout << temp << std::endl;
+	return n;
+}
 
 
 
