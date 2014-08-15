@@ -7,6 +7,8 @@
 
 class sock_int
 {
+private:
+	void printmsg(std::string);
 public:
 	int sockfd; //socket file descriptor
 	int newsockfd; //new socket file descriptor

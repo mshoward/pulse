@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
        exit(0);
     }
     portno = atoi(argv[2]);
-    sockfd = socket(AF_UNIX, SOCK_STREAM, 0);
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
     if (sockfd < 0) 
         error("ERROR opening socket");
     server = gethostbyname(argv[1]);
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
         exit(0);
     }
     bzero((char *) &serv_addr, sizeof(serv_addr));
-    serv_addr.sin_family = AF_UNIX;
+    serv_addr.sin_family = AF_INET;
     bcopy((char *)server->h_addr, 
          (char *)&serv_addr.sin_addr.s_addr,
          server->h_length);
@@ -47,30 +47,11 @@ int main(int argc, char *argv[])
 		n = write(sockfd,buffer,strlen(buffer));
 		if (n < 0) 
 			 error("ERROR writing to socket");
-	}
-		bzero(buffer,256);
-		n = read(sockfd,buffer,255);
+		//bzero(buffer,256);
+		//n = read(sockfd,buffer,255);
 		if (n < 0) 
 			 error("ERROR reading from socket");
-		printf("%s\n",buffer);
+		//printf("%s\n",buffer);
+	}
     return 0;
 }
-
-/*
- * while (1) {
-     newsockfd = accept(sockfd, 
-           (struct sockaddr *) &cli_addr, &clilen);
-     if (newsockfd < 0) 
-         error("ERROR on accept");
-     pid = fork();
-     if (pid < 0)
-         error("ERROR on fork");
-     if (pid == 0)  {
-         close(sockfd);
-         dostuff(newsockfd);
-         exit(0);
-     }
-     else close(newsockfd);
- } 
- */
-
