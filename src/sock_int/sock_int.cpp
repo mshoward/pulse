@@ -1,4 +1,56 @@
 #pragma once
+/***************************************************************
+ * private static members
+ ***************************************************************/
+
+
+
+
+
+
+
+/***************************************************************
+ * public static members
+ ***************************************************************/
+ 
+/***************************************************************
+ * private  members
+***************************************************************/
+void sock_int::printmsg(std::string str)
+{
+	std::cout << str << std::endl;
+}
+
+
+std::string sock_int::cstrTostr(char* str, int c)
+{
+	/** str should be null terminated.  this will segfault if it's not. */
+	std::string ret = "";
+	for(int i = 0; (i < c); i++)
+		ret += str[i];
+	return ret;
+}
+
+
+/***************************************************************
+ * public members
+ ***************************************************************/
+////////////////////////////////////////////////////
+/// State Queries ///
+////////////////////////////////////////////////////
+
+bool sock_int::isReading()
+{
+	return threadStopped == 0;
+}
+bool sock_int::hasUnreadData()
+{
+	return !storage.empty();
+}
+
+
+
+
 sock_int::sock_int()
 {
 	sockfd = 0;
@@ -7,6 +59,8 @@ sock_int::sock_int()
 	clilen = 0;
 	n = 0;
 	errorNo = 0;
+	stopReadThreadSig = 0;
+	threadStopped = 1;
 	memset(&buffer, 0, sizeof(buffer));
 	#ifdef PULSE_DEBUG
 	printmsg("sock_int created");
@@ -15,6 +69,7 @@ sock_int::sock_int()
 sock_int::~sock_int()
 {
 }
+
 
 
 //errorNo = -1 == failure to open socket
@@ -33,6 +88,9 @@ int sock_int::init()
 	#ifdef PULSE_DEBUG
 	printmsg("sock_int initialized");;
 	#endif
+	//OutputStream.str(output);
+	curr = 0;
+	off = 0;
 	return errorNo;
 }
 
@@ -53,7 +111,7 @@ int sock_int::start(int thisPort)
 		errorNo = -2;
 		return errorNo;
 	}
-	listen(sockfd, 12);
+	listen(sockfd, 128);
 	#ifdef PULSE_DEBUG
 	printmsg("sock_int started");
 	#endif
@@ -80,7 +138,7 @@ int sock_int::acceptConnection()
 int sock_int::readOnceFromConnection()
 {
 	#ifdef PULSE_DEBUG
-	printmsg("sock_int message read begin...");
+	//printmsg("sock_int message read begin...");
 	#endif
 	memset(&buffer, 0, sizeof(buffer));
 	n = read(newsockfd, buffer, 255);
@@ -91,7 +149,7 @@ int sock_int::readOnceFromConnection()
 		return errorNo;
 	}
 	#ifdef PULSE_DEBUG
-	printmsg("sock_int message of " + std::to_string(n) + " bytes read:");
+	//printmsg("sock_int message of " + std::to_string(n) + " bytes read:");
 	#endif
 	std::string temp(buffer);
 	std::cout << temp << std::endl;
@@ -99,12 +157,58 @@ int sock_int::readOnceFromConnection()
 	return n;
 }
 
-void sock_int::printmsg(std::string str)
+int sock_int::readThread()
 {
-	std::cout << str << std::endl;
+	buf ThisBuf;
+	int c = 1; 
+	
+	while(stopReadThreadSig && c > 0)
+	{
+		memset(ThisBuf.buffer, 0, 512);
+		c = read(newsockfd, ThisBuf.buffer, 511);
+		if (c < 0)
+		{
+			errorMsg = "Error reading from socket";
+			errorNo = -4;
+			return errorNo;
+		}
+		storage.push(cstrTostr(ThisBuf.buffer, c));
+		//OutputStream.str(output);
+	}
+	threadStopped = 1;
+	return 0;
+}
+
+int sock_int::startAndDetatchReadThread()
+{
+	stopReadThreadSig = 1;
+	threadStopped = 0;
+	std::thread newThread(&sock_int::readThread, this); //readThread() in it's own thread
+	newThread.detach();
+	return 0;
 }
 
 
+int sock_int::stopReadThread()
+{
+	stopReadThreadSig = 0;
+	while(!threadStopped);
+	return 0;
+}
+
+
+
+std::string sock_int::outputData()
+{
+	if(!storage.empty())
+	{
+		std::string ret = storage.front();
+		storage.pop();
+		return ret;
+	}
+	else
+	return "";
+}
 
 
 

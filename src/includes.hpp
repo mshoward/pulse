@@ -2,9 +2,12 @@
 ///stl includes
 #include <iostream>
 #include <string>
+#include <vector>
+#include <queue>
 #include <sstream>
 #include <cstring>
-//#include <thread>
+#include <cctype>
+#include <thread>
 
 
 //linux includes

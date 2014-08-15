@@ -3,7 +3,9 @@
 
 void pmsg(std::string str)
 {
-	std::cout << str << std::endl;
+	
+	std::cout << str;
+	std::cout.flush();
 }
 
 int main(int argc, char *argv[])
@@ -13,14 +15,26 @@ int main(int argc, char *argv[])
 	{
 		if(!sox.start(atoi(argv[1])))
 		{
-			if(!sox.acceptConnection())
+			for(int i = 0; i < 3; i++)
 			{
-				while(sox.readOnceFromConnection());
+				sox.acceptConnection();
+				sox.startAndDetatchReadThread();
+				while(sox.isReading())
+				{
+					if(sox.hasUnreadData())
+					{
+						pmsg("extracted data:\n");
+						pmsg(sox.outputData());
+						
+					}
+				}
+				while(sox.hasUnreadData())
+				{
+					pmsg("extracted data:\n");
+					pmsg(sox.outputData());
+				}
 			}
-			else
-			{
-				std::cout << "accept connection failed" << std::endl;
-			}
+			
 		}
 		else
 		{
@@ -32,5 +46,6 @@ int main(int argc, char *argv[])
 	{
 		pmsg("init fail");
 	}
+	pmsg(sox.output);
 	return 0;
 }

@@ -2,13 +2,18 @@
 //g++ test.cpp -std=c++11 -pthread -Wall -o testing
 
 #include <iostream>
-#include <chrono>
-#include <thread>
+//#include <chrono>
+//#include <thread>
 #include <string>
+#include <random>
+#include <cstdlib>
+#include <cstdio>
+#include <chrono>
+#include <ctime>
 using std::string;
 using std::cout;
 using std::endl;
-
+using namespace std;
 void a(string msg, int n)
 {
 	cout << "Thread " << n << " says: " << msg << endl;
@@ -17,23 +22,25 @@ void a(string msg, int n)
 
 int main() 
 {
+	minstd_rand rander;
+	rander.seed(time(NULL));
 	cout << "hello world" << endl;
-	
-	int er = 0;
-	cout << "check: " << er++ << endl;
-	//threadCaller();
-	string str = "n";
-	cout << "check: " << er++ << endl;
-	for(int i = 0; i < 10; i++)
-	{
-		//cout << "check: " << er++ << endl;
-		string temp = str;
-		std::thread thr(a, temp, i);
-		thr.detach();
-		str += 'n';
-	}
-	cout << "check: " << er++ << endl;
-	std::this_thread::sleep_for(std::chrono::seconds(10));
+	size_t a, b;
+	a = sizeof(int) * 4;
+	b = sizeof(char);
+	while(a != b)
+		b += sizeof(char);
+	cout << b << endl;
+	cout << "int: " << sizeof(int) << endl;
+	cout << "short: " << sizeof(short) << endl;
+	cout << "char: " << sizeof(char) << endl;
+	int randed;
+	randed = rander();
+	for(unsigned int i = 0; i < (unsigned int)randed; i++)
+		randed = rander();
+	printf("int: %#0x\n", randed);
+	printf("short: %#0x\n", (((unsigned short)randed) << 8) >> 8);
+	printf("char: %#0x\n", (((unsigned char)randed) << 0) >> 4);
 	
 	return 0;
 }
