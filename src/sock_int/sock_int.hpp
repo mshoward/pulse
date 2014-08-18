@@ -72,12 +72,12 @@ public:
 	
 	int start(int thisPort);//call second
 	int acceptConnection();
-	int startAndDetatchReadThread();
+	int startAndDetatchAcceptAndReadThread();
 	int stopReadThread();
 	
 	
 	int readOnceFromConnection();
-	int readThread();
+	int acceptAndReadThread();
 	
 	std::string outputData();
 	

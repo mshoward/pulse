@@ -157,11 +157,11 @@ int sock_int::readOnceFromConnection()
 	return n;
 }
 
-int sock_int::readThread()
+int sock_int::acceptAndReadThread()
 {
 	buf ThisBuf;
 	int c = 1; 
-	
+	acceptConnection();//blocks until connection? need to test
 	while(stopReadThreadSig && c > 0)
 	{
 		memset(ThisBuf.buffer, 0, 512);
@@ -179,11 +179,11 @@ int sock_int::readThread()
 	return 0;
 }
 
-int sock_int::startAndDetatchReadThread()
+int sock_int::startAndDetatchAcceptAndReadThread()
 {
 	stopReadThreadSig = 1;
 	threadStopped = 0;
-	std::thread newThread(&sock_int::readThread, this); //readThread() in it's own thread
+	std::thread newThread(&sock_int::acceptAndReadThread, this); //readThread() in it's own thread
 	newThread.detach();
 	return 0;
 }

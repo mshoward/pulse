@@ -9,3 +9,8 @@ class dataBucket;
 #ifdef PULSE_DEBUG
 class test_client;
 #endif
+
+
+
+///defines:
+#define CONF_PATH "./main.conf"

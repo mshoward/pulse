@@ -18,7 +18,7 @@ int main(int argc, char *argv[])
 			for(int i = 0; i < 3; i++)
 			{
 				sox.acceptConnection();
-				sox.startAndDetatchReadThread();
+				sox.startAndDetatchAcceptAndReadThread();
 				while(sox.isReading())
 				{
 					if(sox.hasUnreadData())
