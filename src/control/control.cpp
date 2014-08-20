@@ -1,5 +1,5 @@
 #pragma once
-
+/*
 class control
 {
 public:
@@ -28,7 +28,7 @@ public:
 	
 	
 };//replace control.hpp with this declaration
-
+*/
 /***************************************************************
  * private static members
  ***************************************************************/

@@ -1,5 +1,5 @@
 #pragma once
-
+/*
 class config
 {
 public:
@@ -20,7 +20,7 @@ public:
 	std::string get(std::string str);
 	
 };
-
+*/
 
 
 
