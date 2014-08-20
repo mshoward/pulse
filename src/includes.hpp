@@ -8,7 +8,7 @@
 #include <cstring>
 #include <cctype>
 #include <thread>
-
+#include <map>
 
 //linux includes
 ///sock_int requires:
