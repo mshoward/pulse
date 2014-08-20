@@ -17,7 +17,9 @@ int main(int argc, char *argv[])
 		{
 			for(int i = 0; i < 3; i++)
 			{
-				sox.acceptConnection();
+				//sox.acceptConnection();
+				sox.startAndDetatchAcceptAndReadThread();
+				sox.startAndDetatchAcceptAndReadThread();
 				sox.startAndDetatchAcceptAndReadThread();
 				while(sox.isReading())
 				{

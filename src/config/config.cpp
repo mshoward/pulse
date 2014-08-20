@@ -33,7 +33,7 @@ std::string config::getWord(std::string &str)
 	/** consumes first word of the string */
 	std::string ret = "";
 	int spa = 0;
-	int i = 0;
+	unsigned int i = 0;
 	for(i = 0; (i < str.length()) && (spa < 2); i++)
 	{
 		if(spa > 0)

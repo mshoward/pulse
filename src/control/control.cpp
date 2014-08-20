@@ -72,11 +72,11 @@ int control::init_config()
 	int ret = configuration.init();
 	if(!ret)
 	{
-		out_port = std::string::stoi(configuration.get("out_server_port"));
-		mysql_port = std::string::stoi(configuration.get("mysql_server_port"));
+		out_port = std::stoi(configuration.get("out_server_port"));
+		mysql_port = std::stoi(configuration.get("mysql_server_port"));
 		config_state++;
 	}
-	
+	return ret;
 }
 
 /***************************************************************
@@ -89,7 +89,7 @@ int control::init()
 	sock_state = 0;
 	out_port = 0;
 	mysql_port = 0;
-	
+	return 0;
 }
 
 

@@ -1,5 +1,4 @@
 #pragma once
-
 class control
 {
 public:
@@ -13,6 +12,8 @@ private:
 	int init_config();
 	
 public:
+	int out_port;
+	int mysql_port;
 	sock_int out_server_port;
 	sock_int mysql_server_port; //unsure about this
 	
@@ -25,4 +26,4 @@ public:
 	
 	
 	
-};
+};//replace control.hpp with this declaration
