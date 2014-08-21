@@ -9,4 +9,6 @@
 - [ ] DataBucket module
 - [ ] Scheduler module
 - [X] Socket Interface module
+- [ ] Failure analysis
+- [ ] Status Message Reporting
 - [ ] Iterate and refine
