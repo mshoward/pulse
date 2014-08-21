@@ -15,3 +15,4 @@ class test_client;
 ///defines:
 #define CONF_PATH "./main.conf"
 #define EMPTYSTRING "Empty String"
+#define MAX_DEM_FIELDS 16

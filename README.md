@@ -8,7 +8,7 @@
 - [X] Config module
 - [ ] MYSQL Interface module
 - [O] DataBucket module - *current focus*
-- [O] Structures module (questions, responses, demographics, guids, users, etc.) - *current focus*
+- [X] Structures module (questions, responses, demographics, guids, users, etc.)
 - [ ] Scheduler module
 - [X] Socket Interface module
 - [X] Set up examples folder
@@ -24,11 +24,12 @@
   - I have no idea yet
 - DataBucket module
   - caches
-- Structures module
+- Structures module *unfinished, but close to finished - needs to be uniform with database*
   - question class
   - response class
   - demographic class
-  - etc.
+  - guid class
+  - user class
 
 
 ####Bugfixes:

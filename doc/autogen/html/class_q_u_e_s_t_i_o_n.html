@@ -117,6 +117,8 @@ $(document).ready(function(){initNavTree('class_q_u_e_s_t_i_o_n.html','');});
 Collaboration diagram for QUESTION:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_q_u_e_s_t_i_o_n__coll__graph.png" border="0" usemap="#_q_u_e_s_t_i_o_n_coll__map" alt="Collaboration graph"/></div>
+<map name="_q_u_e_s_t_i_o_n_coll__map" id="_q_u_e_s_t_i_o_n_coll__map">
+<area shape="rect" id="node3" href="class_demographic.html" title="Demographic" alt="" coords="96,5,195,32"/></map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -125,8 +127,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2370f8f415286455928d6497d80c25a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a93f43587ee13ae645cc9d41076b6b3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_u_e_s_t_i_o_n.html#a5a93f43587ee13ae645cc9d41076b6b3">~QUESTION</a> ()</td></tr>
 <tr class="separator:a5a93f43587ee13ae645cc9d41076b6b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16c22f8bdab6fae8237ad69ba2897c55"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_u_e_s_t_i_o_n.html#a16c22f8bdab6fae8237ad69ba2897c55">fits</a> (<a class="el" href="class_demographic.html">Demographic</a> &amp;demo)</td></tr>
-<tr class="separator:a16c22f8bdab6fae8237ad69ba2897c55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9018f903c275d5fbe57de7709e1b9580"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_u_e_s_t_i_o_n.html#a9018f903c275d5fbe57de7709e1b9580">fits</a> (<a class="el" href="class_demographic.html">Demographic</a> &amp;dem)</td></tr>
+<tr class="separator:a9018f903c275d5fbe57de7709e1b9580"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a011cd8802e888602b54fbe5378c687d1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_u_e_s_t_i_o_n.html#a011cd8802e888602b54fbe5378c687d1">fits</a> (<a class="el" href="class_u_s_e_r.html">USER</a> &amp;usr)</td></tr>
 <tr class="separator:a011cd8802e888602b54fbe5378c687d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -144,17 +146,16 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a58137afeb0a312587490420691e97e32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b9a0aa252c15cef15406f23c88a486b"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_u_e_s_t_i_o_n.html#a6b9a0aa252c15cef15406f23c88a486b">target_demographic</a></td></tr>
 <tr class="separator:a6b9a0aa252c15cef15406f23c88a486b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa2ae864ac43067ac8fe4957c4c88c4aa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_demographic.html">Demographic</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_q_u_e_s_t_i_o_n.html#aa2ae864ac43067ac8fe4957c4c88c4aa">demo</a></td></tr>
+<tr class="separator:aa2ae864ac43067ac8fe4957c4c88c4aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p>Definition at line <a class="el" href="structures_8hpp_source.html#l00014">14</a> of file <a class="el" href="structures_8hpp_source.html">structures.hpp</a>.</p>
+<p>Definition at line <a class="el" href="structures_8hpp_source.html#l00017">17</a> of file <a class="el" href="structures_8hpp_source.html">structures.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a2370f8f415286455928d6497d80c25a4"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">QUESTION::QUESTION </td>
@@ -163,14 +164,7 @@ Public Attributes</h2></td></tr>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-
-<p>Definition at line <a class="el" href="structures_8hpp_source.html#l00024">24</a> of file <a class="el" href="structures_8hpp_source.html">structures.hpp</a>.</p>
 
 </div>
 </div>
@@ -195,12 +189,12 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="structures_8hpp_source.html#l00025">25</a> of file <a class="el" href="structures_8hpp_source.html">structures.hpp</a>.</p>
+<p>Definition at line <a class="el" href="structures_8hpp_source.html#l00033">33</a> of file <a class="el" href="structures_8hpp_source.html">structures.hpp</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a16c22f8bdab6fae8237ad69ba2897c55"></a>
+<a class="anchor" id="a9018f903c275d5fbe57de7709e1b9580"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -208,11 +202,23 @@ Public Attributes</h2></td></tr>
           <td class="memname">bool QUESTION::fits </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_demographic.html">Demographic</a> &amp;&#160;</td>
-          <td class="paramname"><em>demo</em></td><td>)</td>
+          <td class="paramname"><em>dem</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>end <a class="el" href="class_g_u_i_d.html">GUID</a> <a class="el" href="class_q_u_e_s_t_i_o_n.html">QUESTION</a> </p>
+
+<p>Definition at line <a class="el" href="structures_8cpp_source.html#l00031">31</a> of file <a class="el" href="structures_8cpp_source.html">structures.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_q_u_e_s_t_i_o_n_a9018f903c275d5fbe57de7709e1b9580_cgraph.png" border="0" usemap="#class_q_u_e_s_t_i_o_n_a9018f903c275d5fbe57de7709e1b9580_cgraph" alt=""/></div>
+<map name="class_q_u_e_s_t_i_o_n_a9018f903c275d5fbe57de7709e1b9580_cgraph" id="class_q_u_e_s_t_i_o_n_a9018f903c275d5fbe57de7709e1b9580_cgraph">
+<area shape="rect" id="node2" href="class_demographic.html#a6378d8684bcef008cddee0afebf2cbe6" title="Demographic::fits" alt="" coords="173,5,299,32"/><area shape="rect" id="node3" href="class_demographic.html#a8ae2a711e2da23c3a14e00dfb6466a70" title="Demographic::tempFits" alt="" coords="347,5,506,32"/></map>
+</div>
+</p>
 
 </div>
 </div>
@@ -230,6 +236,17 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Definition at line <a class="el" href="structures_8cpp_source.html#l00040">40</a> of file <a class="el" href="structures_8cpp_source.html">structures.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_q_u_e_s_t_i_o_n_a011cd8802e888602b54fbe5378c687d1_cgraph.png" border="0" usemap="#class_q_u_e_s_t_i_o_n_a011cd8802e888602b54fbe5378c687d1_cgraph" alt=""/></div>
+<map name="class_q_u_e_s_t_i_o_n_a011cd8802e888602b54fbe5378c687d1_cgraph" id="class_q_u_e_s_t_i_o_n_a011cd8802e888602b54fbe5378c687d1_cgraph">
+<area shape="rect" id="node2" href="class_demographic.html#a6378d8684bcef008cddee0afebf2cbe6" title="Demographic::fits" alt="" coords="173,5,299,32"/><area shape="rect" id="node3" href="class_demographic.html#a8ae2a711e2da23c3a14e00dfb6466a70" title="Demographic::tempFits" alt="" coords="347,5,506,32"/></map>
+</div>
+</p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
@@ -243,7 +260,21 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="structures_8hpp_source.html#l00021">21</a> of file <a class="el" href="structures_8hpp_source.html">structures.hpp</a>.</p>
+<p>Definition at line <a class="el" href="structures_8hpp_source.html#l00028">28</a> of file <a class="el" href="structures_8hpp_source.html">structures.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa2ae864ac43067ac8fe4957c4c88c4aa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_demographic.html">Demographic</a>* QUESTION::demo</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="structures_8hpp_source.html#l00030">30</a> of file <a class="el" href="structures_8hpp_source.html">structures.hpp</a>.</p>
 
 </div>
 </div>
@@ -257,7 +288,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="structures_8hpp_source.html#l00019">19</a> of file <a class="el" href="structures_8hpp_source.html">structures.hpp</a>.</p>
+<p>Definition at line <a class="el" href="structures_8hpp_source.html#l00026">26</a> of file <a class="el" href="structures_8hpp_source.html">structures.hpp</a>.</p>
 
 </div>
 </div>
@@ -271,7 +302,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="structures_8hpp_source.html#l00018">18</a> of file <a class="el" href="structures_8hpp_source.html">structures.hpp</a>.</p>
+<p>Definition at line <a class="el" href="structures_8hpp_source.html#l00025">25</a> of file <a class="el" href="structures_8hpp_source.html">structures.hpp</a>.</p>
 
 </div>
 </div>
@@ -284,8 +315,9 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>All memory allocation is handled by other sections - <a class="el" href="class_demographic.html">Demographic</a> pointers are pointers to a demographic held in storage by something else. </p>
 
-<p>Definition at line <a class="el" href="structures_8hpp_source.html#l00017">17</a> of file <a class="el" href="structures_8hpp_source.html">structures.hpp</a>.</p>
+<p>Definition at line <a class="el" href="structures_8hpp_source.html#l00024">24</a> of file <a class="el" href="structures_8hpp_source.html">structures.hpp</a>.</p>
 
 </div>
 </div>
@@ -299,7 +331,7 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="structures_8hpp_source.html#l00020">20</a> of file <a class="el" href="structures_8hpp_source.html">structures.hpp</a>.</p>
+<p>Definition at line <a class="el" href="structures_8hpp_source.html#l00027">27</a> of file <a class="el" href="structures_8hpp_source.html">structures.hpp</a>.</p>
 
 </div>
 </div>
@@ -313,12 +345,13 @@ Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="structures_8hpp_source.html#l00022">22</a> of file <a class="el" href="structures_8hpp_source.html">structures.hpp</a>.</p>
+<p>Definition at line <a class="el" href="structures_8hpp_source.html#l00029">29</a> of file <a class="el" href="structures_8hpp_source.html">structures.hpp</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/structures/<a class="el" href="structures_8hpp_source.html">structures.hpp</a></li>
+<li>src/structures/<a class="el" href="structures_8cpp_source.html">structures.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -326,7 +359,7 @@ Public Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="class_q_u_e_s_t_i_o_n.html">QUESTION</a></li>
-    <li class="footer">Generated on Thu Aug 21 2014 14:42:52 for pulse by
+    <li class="footer">Generated on Thu Aug 21 2014 16:57:32 for pulse by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

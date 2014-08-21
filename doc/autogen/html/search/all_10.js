@@ -4,6 +4,7 @@ var searchData=
   ['scheduler_2ehpp',['scheduler.hpp',['../scheduler_8hpp.html',1,'']]],
   ['serv_5faddr',['serv_addr',['../classsock__int.html#a23fd5ed58e0d7d59058a39bd3b209f16',1,'sock_int']]],
   ['server_2ec',['server.c',['../server_8c.html',1,'']]],
+  ['setname',['setName',['../classsock__int.html#ab1cdd237c861407a378947b9a69fcb3d',1,'sock_int']]],
   ['sock_5fint',['sock_int',['../classsock__int.html',1,'sock_int'],['../classsock__int.html#af56c50ca9b505feee5290881486e4a65',1,'sock_int::sock_int()']]],
   ['sock_5fint_2ecpp',['sock_int.cpp',['../sock__int_8cpp.html',1,'']]],
   ['sock_5fint_2ehpp',['sock_int.hpp',['../sock__int_8hpp.html',1,'']]],

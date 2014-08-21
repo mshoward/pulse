@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['out_5fport',['out_port',['../classcontrol.html#abb8d80f856354f92f0b1d11e27d0999f',1,'control']]],
-  ['output',['output',['../classsock__int.html#a3322c00ef45ce4addea722d056dc16e3',1,'sock_int']]]
+  ['mysql_5fport',['mysql_port',['../classcontrol.html#abc33adb5df27dd1baa1c4141d5420eb4',1,'control']]]
 ];

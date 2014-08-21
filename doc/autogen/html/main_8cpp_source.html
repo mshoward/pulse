@@ -111,47 +111,55 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html','');});
 <div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="main_8cpp.html#a3c7680ef3aa40866083d2be35a492b4e">    4</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="examples_2sock__int_01example_2main_8cpp.html#a3c7680ef3aa40866083d2be35a492b4e">pmsg</a>(std::string str)</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    std::cout &lt;&lt; str &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;}</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">   10</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="examples_2sock__int_01example_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">int</span> er = 0;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classcontrol.html">control</a> controller;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    std::string bucket;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">int</span> previous = -1;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">int</span> errors = 0;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="examples_2sock__int_01example_2main_8cpp.html#a3c7680ef3aa40866083d2be35a492b4e">pmsg</a>(<span class="stringliteral">&quot;Controller instantiated...&quot;</span>);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    er = controller.<a class="code" href="classcontrol.html#a98f7dc96d3f361a9d9d1182deae51972">init</a>();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="examples_2sock__int_01example_2main_8cpp.html#a3c7680ef3aa40866083d2be35a492b4e">pmsg</a>(<span class="stringliteral">&quot;Controller initialized...&quot;</span>);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">if</span> (!er)</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="examples_2sock__int_01example_2main_8cpp.html#a3c7680ef3aa40866083d2be35a492b4e">pmsg</a>(<span class="stringliteral">&quot;Controller successful!\t......\tReading...&quot;</span>);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">while</span>(controller.<a class="code" href="classcontrol.html#a3a4d2e81bf5e2684edbd79dfbdeca434">dirty_sock_connected</a>())</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            bucket = controller.<a class="code" href="classcontrol.html#a0297b6e5fb4cce8b267940a7e550da17">Next_dirty_sock_line</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">if</span> (bucket != <span class="stringliteral">&quot;&quot;</span> &amp;&amp; bucket != <a class="code" href="defs_8hpp.html#a79ff1b9ff232b38c8b5600659e6bc7c2">EMPTYSTRING</a>)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keywordflow">if</span> (previous + 1 != std::stoi(bucket)) std::cout &lt;&lt; <span class="stringliteral">&quot;ERROR: &quot;</span>  &lt;&lt; errors++ &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;While connected: &quot;</span> &lt;&lt; bucket &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                previous++;<span class="comment">// = std::stoi(bucket);</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keywordflow">if</span> (errors &gt; 1)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">while</span>(controller.<a class="code" href="classcontrol.html#a43b3053ce2394419bec737cb4a867be9">dirty_sock</a>.<a class="code" href="classsock__int.html#a9becfbdc30e3f7d2f07dfe9f5762e5d9">hasUnreadData</a>())</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            bucket = controller.<a class="code" href="classcontrol.html#a0297b6e5fb4cce8b267940a7e550da17">Next_dirty_sock_line</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">if</span>(bucket != <span class="stringliteral">&quot;&quot;</span> &amp;&amp; bucket != <a class="code" href="defs_8hpp.html#a79ff1b9ff232b38c8b5600659e6bc7c2">EMPTYSTRING</a>)</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;After connection: &quot;</span> &lt;&lt; bucket &lt;&lt; <span class="stringliteral">&quot;...&quot;</span>&lt;&lt; std::endl;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    std::cout &lt;&lt; str;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    std::cout.flush();</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">   11</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="examples_2sock__int_01example_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">int</span> er = 0;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="examples_2sock__int_01example_2main_8cpp.html#a3c7680ef3aa40866083d2be35a492b4e">pmsg</a>(<span class="stringliteral">&quot;Creating Controller...&quot;</span>);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classcontrol.html">control</a> controller;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    std::string bucket;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">int</span> previous = -1;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span> errors = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="examples_2sock__int_01example_2main_8cpp.html#a3c7680ef3aa40866083d2be35a492b4e">pmsg</a>(<span class="stringliteral">&quot; done!\n&quot;</span>);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="examples_2sock__int_01example_2main_8cpp.html#a3c7680ef3aa40866083d2be35a492b4e">pmsg</a>(<span class="stringliteral">&quot;Initializing Controller...\n&quot;</span>);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    er = controller.<a class="code" href="classcontrol.html#a98f7dc96d3f361a9d9d1182deae51972">init</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="examples_2sock__int_01example_2main_8cpp.html#a3c7680ef3aa40866083d2be35a492b4e">pmsg</a>(<span class="stringliteral">&quot;\nInitialization Complete!\n&quot;</span>);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordflow">if</span> (!er)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="examples_2sock__int_01example_2main_8cpp.html#a3c7680ef3aa40866083d2be35a492b4e">pmsg</a>(<span class="stringliteral">&quot;Initialization successful!\n&quot;</span>);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <a class="code" href="examples_2sock__int_01example_2main_8cpp.html#a3c7680ef3aa40866083d2be35a492b4e">pmsg</a>(<span class="stringliteral">&quot;Reading...\n&quot;</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">while</span>(controller.<a class="code" href="classcontrol.html#a3a4d2e81bf5e2684edbd79dfbdeca434">dirty_sock_connected</a>())</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            bucket = controller.<a class="code" href="classcontrol.html#a0297b6e5fb4cce8b267940a7e550da17">Next_dirty_sock_line</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keywordflow">if</span> (bucket != <span class="stringliteral">&quot;&quot;</span> &amp;&amp; bucket != <a class="code" href="defs_8hpp.html#a79ff1b9ff232b38c8b5600659e6bc7c2">EMPTYSTRING</a>)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="keywordflow">if</span> (previous + 1 != std::stoi(bucket)) std::cout &lt;&lt; <span class="stringliteral">&quot;ERROR: &quot;</span>  &lt;&lt; errors++ &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                std::cout &lt;&lt; <span class="stringliteral">&quot;While connected: &quot;</span> &lt;&lt; bucket &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                previous++;<span class="comment">// = std::stoi(bucket);</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">if</span> (errors &gt; 1)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">while</span>(controller.<a class="code" href="classcontrol.html#a43b3053ce2394419bec737cb4a867be9">dirty_sock</a>.<a class="code" href="classsock__int.html#a9becfbdc30e3f7d2f07dfe9f5762e5d9">hasUnreadData</a>())</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            bucket = controller.<a class="code" href="classcontrol.html#a0297b6e5fb4cce8b267940a7e550da17">Next_dirty_sock_line</a>();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">if</span>(bucket != <span class="stringliteral">&quot;&quot;</span> &amp;&amp; bucket != <a class="code" href="defs_8hpp.html#a79ff1b9ff232b38c8b5600659e6bc7c2">EMPTYSTRING</a>)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            std::cout &lt;&lt; <span class="stringliteral">&quot;After connection: &quot;</span> &lt;&lt; bucket &lt;&lt; <span class="stringliteral">&quot;...&quot;</span>&lt;&lt; std::endl;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="examples_2sock__int_01example_2main_8cpp.html#a3c7680ef3aa40866083d2be35a492b4e">pmsg</a>(<span class="stringliteral">&quot;Initialization failed&quot;</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
 <div class="ttc" id="classcontrol_html"><div class="ttname"><a href="classcontrol.html">control</a></div><div class="ttdef"><b>Definition:</b> <a href="control_8hpp_source.html#l00002">control.hpp:2</a></div></div>
 <div class="ttc" id="classcontrol_html_a98f7dc96d3f361a9d9d1182deae51972"><div class="ttname"><a href="classcontrol.html#a98f7dc96d3f361a9d9d1182deae51972">control::init</a></div><div class="ttdeci">int init()</div><div class="ttdef"><b>Definition:</b> <a href="control_8cpp_source.html#l00092">control.cpp:92</a></div></div>
 <div class="ttc" id="examples_2sock__int_01example_2main_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="examples_2sock__int_01example_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> <a href="examples_2sock__int_01example_2main_8cpp_source.html#l00011">main.cpp:11</a></div></div>
@@ -168,7 +176,7 @@ $(document).ready(function(){initNavTree('main_8cpp_source.html','');});
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Generated on Thu Aug 21 2014 14:42:51 for pulse by
+    <li class="footer">Generated on Thu Aug 21 2014 16:57:32 for pulse by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

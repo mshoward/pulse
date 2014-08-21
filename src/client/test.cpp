@@ -6,6 +6,7 @@
 //#include <thread>
 #include <string>
 #include <random>
+#include <cstring>
 #include <cstdlib>
 #include <cstdio>
 #include <chrono>
@@ -22,6 +23,10 @@ void a(string msg, int n)
 
 int main() 
 {
+	int ar[10];
+	memset(ar, 0, sizeof(ar));
+	for(int i = 0; i < 10; i++)
+		cout << ar[i] << endl;
 	minstd_rand rander;
 	rander.seed(time(NULL));
 	cout << "hello world" << endl;

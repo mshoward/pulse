@@ -11,6 +11,5 @@ var classcontrol =
     [ "dirty_sock", "classcontrol.html#a43b3053ce2394419bec737cb4a867be9", null ],
     [ "errorNo", "classcontrol.html#a3068e1430b662c2a51d95cb45f279521", null ],
     [ "mysql_port", "classcontrol.html#abc33adb5df27dd1baa1c4141d5420eb4", null ],
-    [ "mysql_server_port", "classcontrol.html#a81315ef152b499be4a46292d58b787c6", null ],
     [ "out_port", "classcontrol.html#abb8d80f856354f92f0b1d11e27d0999f", null ]
 ];

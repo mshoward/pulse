@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['question_5fid',['question_id',['../class_q_u_e_s_t_i_o_n.html#a577b51e4a0603bda194f3e61b62b6839',1,'QUESTION']]],
-  ['question_5ftext',['question_text',['../class_q_u_e_s_t_i_o_n.html#a9c000a8b0d6d3615b3cec5766eda2dba',1,'QUESTION']]]
+  ['out_5fport',['out_port',['../classcontrol.html#abb8d80f856354f92f0b1d11e27d0999f',1,'control']]],
+  ['output',['output',['../classsock__int.html#a3322c00ef45ce4addea722d056dc16e3',1,'sock_int']]]
 ];
