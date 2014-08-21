@@ -6,6 +6,7 @@
 #include <queue>
 #include <fstream>
 #include <sstream>
+#include <iterator>
 #include <cstring>
 #include <cctype>
 #include <thread>

@@ -11,6 +11,7 @@
 #include "client/test.hpp"
 #endif
 
+#include "structures/structures.hpp"
 #include "config/config.hpp"
 #include "sock_int/sock_int.hpp"
 #include "scheduler/scheduler.hpp"
@@ -27,6 +28,7 @@
 
 #endif
 
+#include "structures/structures.cpp"
 #include "config/config.cpp"
 #include "control/control.cpp"
 #include "dataBucket/dataBucket.cpp"

@@ -210,6 +210,53 @@ std::string sock_int::outputData()
 	return "";
 }
 
+std::string sock_int::NextLine()
+{
+	std::string ret = "";
+	unsigned int i;
+	char c;
+	if(!storage.empty())
+	{
+		//std::cout << "Current buffer holds: '" << storage.front() << "'" << std::endl;
+		for(i = 0; !(storage.empty()); i++)
+		{
+			//std::cout << "no seg" << std::endl;
+			c = storage.front()[i];
+			//std::cout << "no seg" << std::endl;
+			if (std::isspace(c))
+			{//if it's a new line, it's time to return, but not before substringing the buffer
+				if (i+1 >= storage.front().length())//if there is nothing left in the buffer
+				{
+					storage.pop();
+					//std::cout << "ended in space\nNew buffer holds: '" << storage.front() << "'" << std::endl;
+				}
+				else
+					storage.front() = storage.front().substr(i+1, storage.front().length());
+					//else reduce the buffer by amount consumed
+				return ret;
+			}
+			else
+			{
+				//if not a new line, add it to the return string
+				ret += c;
+				//if it's the end of the front buffer, pop the front buffer off, reset i
+				if (i+1 >= storage.front().length())
+				{
+					storage.pop();
+					///debug code
+					///if(!storage.empty())
+					///	std::cout << "Continuing\nNew buffer holds: '" << storage.front() << "'" << std::endl;
+					///end debug code
+					i = -1;
+				}
+			}
+		}
+		return ret;
+	}
+	else
+	return EMPTYSTRING;
+}
+
 
 
 

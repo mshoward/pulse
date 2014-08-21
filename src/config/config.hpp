@@ -18,6 +18,7 @@ public:
 	int init();
 	std::string get(const char * str);
 	std::string get(std::string str);
+	void print_All();
 	
 };
 

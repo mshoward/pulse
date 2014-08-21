@@ -15,7 +15,7 @@ private:
 public:
 	int out_port;
 	int mysql_port;
-	sock_int out_server_port;
+	sock_int dirty_sock;
 	sock_int mysql_server_port; //unsure about this
 	
 	config configuration;
@@ -25,10 +25,11 @@ public:
 	
 	int init();
 	
-	
+	std::string Next_dirty_sock_line();
 	
 };//replace control.hpp with this declaration
 */
+
 /***************************************************************
  * private static members
  ***************************************************************/
@@ -59,11 +60,13 @@ int control::init_sock()
 	int ret = 0;
 	if(config_state)
 	{
-		out_server_port.init();
-		out_server_port.start(out_port);
-		out_server_port.startAndDetatchAcceptAndReadThread();
-		ret = out_server_port.errorNo;
+		dirty_sock.init();
+		dirty_sock.start(out_port);
+		dirty_sock.startAndDetatchAcceptAndReadThread();
+		ret = dirty_sock.errorNo;
 	}
+	else
+	ret = 4;
 	return ret;
 }
 
@@ -72,6 +75,9 @@ int control::init_config()
 	int ret = configuration.init();
 	if(!ret)
 	{
+		configuration.print_All();
+		std::string dirty_sock_port = configuration.get("out_server_port");
+		std::cout << "dirty_sock port: " << dirty_sock_port << std::endl;
 		out_port = std::stoi(configuration.get("out_server_port"));
 		mysql_port = std::stoi(configuration.get("mysql_server_port"));
 		config_state++;
@@ -85,14 +91,25 @@ int control::init_config()
 
 int control::init()
 {
+	int ret = 0;
 	config_state = 0;
 	sock_state = 0;
 	out_port = 0;
 	mysql_port = 0;
-	return 0;
+	ret = ret | init_config();
+	ret = ret | init_sock();
+	return ret;
 }
 
+bool control::dirty_sock_connected()
+{
+	return dirty_sock.threadStopped == 0;
+}
 
+std::string control::Next_dirty_sock_line()
+{
+	return dirty_sock.NextLine();
+}
 
 
 

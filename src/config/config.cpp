@@ -32,20 +32,25 @@ std::string config::getWord(std::string &str)
 {
 	/** consumes first word of the string */
 	std::string ret = "";
-	int spa = 0;
+	int word_started = 0;
+	int word_ended = 0;
 	unsigned int i = 0;
-	for(i = 0; (i < str.length()) && (spa < 2); i++)
+	for(i = 0; (i < str.length()) && !(word_ended); i++)
 	{
-		if(spa > 0)
+		//word started
+		if (std::isspace(str[i]))
 		{
-			if(!std::isspace(str[i]))
-				ret += str[i];
+			if(word_started)
+				word_ended++;
 		}
+		else
+		{
+			word_started++;
+			ret += str[i];
+		}
+		//during word
 		
-		if(std::isspace(str[i]))
-		{
-			spa++;
-		}
+		//end word
 	}
 	str = str.substr(i, str.length());
 	return ret;
@@ -55,7 +60,7 @@ void config::stripComment(std::string &str)
 {
 	str = ((str.find('#') == std::string::npos) ? 
 		str :
-		str.substr(str.find('#'), str.length()));
+		str.substr(str.length() - str.find('#'), str.length()));
 }
 
 /***************************************************************
@@ -75,6 +80,7 @@ int config::init()
 	conf.open(CONF_PATH, std::ios::in);
 	if(!conf.is_open())
 	{
+		std::cout << "Config File Open Failed!" << std:: endl;
 		errorNo = ret = -1;
 		return ret;
 	}
@@ -82,18 +88,23 @@ int config::init()
 	{
 		line.clear();
 		getline(conf, line);
+		//std::cout << "Read: " << line << std::endl;
 		stripComment(line);
-		
+		//std::cout << "Stripped: " << line << std::endl;
 		//prop name
 		prop = getWord(line);
+		//std::cout << "Prop is: " << prop << std::endl;
 		if(prop != "")
 		{
 			test = getWord(line);
+			//std::cout << "test is: " << test << std::endl;
 			if(test == "=")
 			{
 				val = getWord(line);
+				//std::cout << "Val is: " << val << std::endl;
 				if(val != "")
 				{
+					std::cout << "mapping: " << prop << " to: " << val << std::endl;
 					mapper[prop] = val;
 				}
 			}
@@ -121,7 +132,15 @@ std::string config::get(std::string str)
 }
 
 
-
+void config::print_All()
+{
+	std::cout << "printing mapper: " << std::endl;
+	for (auto it = mapper.cbegin(); it != mapper.cend(); ++it)
+	{
+		std::cout << it->first << " : " << it->second << std::endl;
+	}
+	std::cout << "done printing!" << std::endl;
+}
 ////////////////////////////////////////////////////
 /// State Queries ///
 ////////////////////////////////////////////////////

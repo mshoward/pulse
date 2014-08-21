@@ -12,8 +12,7 @@ Ideal use is:
 
 - init()
 - start()
-- acceptConnection()
-- startAndDetatchReadThread()
+- startAndDetatchAcceptAndReadThread()
 - read from the output queue object until time to quit
 - then call stopReadThread() - stopReadThread blocks until the reading thread has stopped.
 
@@ -39,8 +38,6 @@ private:
 	static buf emptyBuf; //I don't remember why I put this here, but I'm afraid to delete because it's late
 	
 	int 			stopReadThreadSig;
-	int 			threadStopped;
-	
 	void			printmsg(std::string);
 	std::string		cstrTostr(char* str, int strln);
 	unsigned int curr;
@@ -48,7 +45,7 @@ private:
 	
 
 public:
-	
+	int 			threadStopped;
 	int sockfd; //socket file descriptor
 	int newsockfd; //new socket file descriptor
 	std::string output; //FIFO queue for outputting reads to the rest of the program
@@ -80,7 +77,7 @@ public:
 	int acceptAndReadThread();
 	
 	std::string outputData();
-	
+	std::string NextLine();
 	
 	/** state queries */
 	bool isReading();

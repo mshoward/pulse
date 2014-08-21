@@ -1,0 +1,11 @@
+<map id="main" name="main">
+<area shape="rect" id="node2" href="$classsock__int.html#adb61077bcbe297edd1a093569b78193f" title="sock_int::init" alt="" coords="144,5,240,32"/>
+<area shape="rect" id="node3" href="$classsock__int.html#a5e4e93e8ef28b802a5acf8a093c47226" title="sock_int::start" alt="" coords="139,56,245,83"/>
+<area shape="rect" id="node4" href="$classsock__int.html#aa7e285d845024e849f5821fcc000e5dd" title="sock_int::startAndDetatch\lAcceptAndReadThread" alt="" coords="105,107,279,149"/>
+<area shape="rect" id="node7" href="$classsock__int.html#ad5e561939f40895fd8a380da1d698a47" title="State Queries ///. " alt="" coords="123,173,261,200"/>
+<area shape="rect" id="node8" href="$classsock__int.html#a9becfbdc30e3f7d2f07dfe9f5762e5d9" title="sock_int::hasUnreadData" alt="" coords="107,224,277,251"/>
+<area shape="rect" id="node9" href="$examples_2sock__int_01example_2main_8cpp.html#a3c7680ef3aa40866083d2be35a492b4e" title="pmsg" alt="" coords="165,275,219,301"/>
+<area shape="rect" id="node10" href="$classsock__int.html#aa51c89a187a3d405c85746dbc32c16a9" title="sock_int::outputData" alt="" coords="121,325,263,352"/>
+<area shape="rect" id="node5" href="$classsock__int.html#aee4e82d455760cd259eee28b9c68bbb3" title="sock_int::acceptAndReadThread" alt="" coords="329,115,541,141"/>
+<area shape="rect" id="node6" href="$classsock__int.html#a43ec39bf98b73b756b74cd5390c9aa61" title="sock_int::acceptConnection" alt="" coords="589,115,773,141"/>
+</map>

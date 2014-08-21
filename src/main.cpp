@@ -4,50 +4,44 @@
 void pmsg(std::string str)
 {
 	
-	std::cout << str;
-	std::cout.flush();
+	std::cout << str << std::endl;
 }
 
 int main(int argc, char *argv[])
 {
-	sock_int sox;
-	if(!sox.init())
+	int er = 0;
+	control controller;
+	std::string bucket;
+	int previous = -1;
+	int errors = 0;
+	pmsg("Controller instantiated...");
+	er = controller.init();
+	pmsg("Controller initialized...");
+	if (!er)
 	{
-		if(!sox.start(atoi(argv[1])))
+		pmsg("Controller successful!\t......\tReading...");
+		while(controller.dirty_sock_connected())
 		{
-			for(int i = 0; i < 3; i++)
+			bucket = controller.Next_dirty_sock_line();
+			if (bucket != "" && bucket != EMPTYSTRING)
 			{
-				//sox.acceptConnection();
-				sox.startAndDetatchAcceptAndReadThread();
-				sox.startAndDetatchAcceptAndReadThread();
-				sox.startAndDetatchAcceptAndReadThread();
-				while(sox.isReading())
+				
+				if (previous + 1 != std::stoi(bucket)) std::cout << "ERROR: "  << errors++ << std::endl;
+				std::cout << "While connected: " << bucket << std::endl;
+				previous++;// = std::stoi(bucket);
+				if (errors > 1)
 				{
-					if(sox.hasUnreadData())
-					{
-						pmsg("extracted data:\n");
-						pmsg(sox.outputData());
-						
-					}
+					return 0;
 				}
-				while(sox.hasUnreadData())
-				{
-					pmsg("extracted data:\n");
-					pmsg(sox.outputData());
-				}
+				
 			}
-			
 		}
-		else
+		while(controller.dirty_sock.hasUnreadData())
 		{
-			pmsg("start fail");
-			pmsg(std::to_string(sox.errorNo));
+			bucket = controller.Next_dirty_sock_line();
+			if(bucket != "" && bucket != EMPTYSTRING)
+			std::cout << "After connection: " << bucket << "..."<< std::endl;
 		}
 	}
-	else
-	{
-		pmsg("init fail");
-	}
-	pmsg(sox.output);
 	return 0;
 }

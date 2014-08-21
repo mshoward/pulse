@@ -14,16 +14,17 @@ private:
 public:
 	int out_port;
 	int mysql_port;
-	sock_int out_server_port;
+	
+	sock_int dirty_sock;
 	sock_int mysql_server_port; //unsure about this
 	
 	config configuration;
 	
-	control();
-	~control();
+	control(){}
+	~control(){}
 	
 	int init();
-	
-	
+	bool dirty_sock_connected();
+	std::string Next_dirty_sock_line();
 	
 };//replace control.hpp with this declaration

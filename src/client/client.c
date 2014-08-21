@@ -15,16 +15,10 @@ void error(char *msg)
 
 void fillRand(char *buf, int bufSize, int i)
 {
-	int randedA, randedD, randedC, randedB;
 	bzero(buf, bufSize);
 	//srand(time(0));
 	
-	randedA = rand();
-	randedB = rand();
-	randedC = rand();
-	randedD = rand();
-	randedA = randedB = randedC = randedD = i;
-	snprintf(buf, bufSize, "%X-%X-%X-%X\n", randedA, randedB, randedC, randedD);
+	snprintf(buf, bufSize, "%d\n", i);
 	
 }
 
@@ -66,12 +60,17 @@ int main(int argc, char *argv[])
     while(i < atoi(argv[3]))
     {
 		//printf("Please enter the message: ");
-		printf("Time: %d\n", i);
+		//printf("Time: %d\n", i);
 		//i++;
 		bzero(buffer,512);
 		//fgets(buffer,255,stdin);
 		fillRand(buffer, 512, i);
 		n = write(sockfd,buffer,strlen(buffer));
+		if (i != atoi(buffer))
+			printf("Error!!!\n");
+		printf("%d : %s", i, buffer);
+		if (i != atoi(buffer))
+			printf("Error!!!\n");
 		if (n < 0) 
 			 error("ERROR writing to socket");
 		//bzero(buffer,256);
