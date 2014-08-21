@@ -116,6 +116,10 @@ $(document).ready(function(){initNavTree('classconfig.html','');});
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a04c197762c08cbccd814844648e981b2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconfig.html#a04c197762c08cbccd814844648e981b2">getWord</a> (std::string &amp;str)</td></tr>
+<tr class="separator:a04c197762c08cbccd814844648e981b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35320a7df595c3215b0724444f878258"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconfig.html#a35320a7df595c3215b0724444f878258">stripComment</a> (std::string &amp;str)</td></tr>
+<tr class="separator:a35320a7df595c3215b0724444f878258"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1b245308f26ce7979e4c37e93869706"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconfig.html#ab1b245308f26ce7979e4c37e93869706">config</a> ()</td></tr>
 <tr class="separator:ab1b245308f26ce7979e4c37e93869706"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b8b1ccf97780676a19296f72fee3aae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconfig.html#a9b8b1ccf97780676a19296f72fee3aae">~config</a> ()</td></tr>
@@ -131,6 +135,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a0e9b0962c79ec328511e48a732df3b5e"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, <br class="typebreak"/>
+std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconfig.html#a0e9b0962c79ec328511e48a732df3b5e">mapper</a></td></tr>
+<tr class="separator:a0e9b0962c79ec328511e48a732df3b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1dd32838ed9a980ad5ebd6c194dd64e0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconfig.html#a1dd32838ed9a980ad5ebd6c194dd64e0">errorNo</a></td></tr>
 <tr class="separator:a1dd32838ed9a980ad5ebd6c194dd64e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af733c3a7ceffcd6507f50636b454286a"><td class="memItemLeft" align="right" valign="top">std::fstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classconfig.html#af733c3a7ceffcd6507f50636b454286a">conf</a></td></tr>
@@ -236,6 +243,34 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="a04c197762c08cbccd814844648e981b2"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string config::getWord </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>consumes first word of the string </p>
+
+<p>Definition at line <a class="el" href="config_8cpp_source.html#l00031">31</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classconfig_a04c197762c08cbccd814844648e981b2_icgraph.png" border="0" usemap="#classconfig_a04c197762c08cbccd814844648e981b2_icgraph" alt=""/></div>
+<map name="classconfig_a04c197762c08cbccd814844648e981b2_icgraph" id="classconfig_a04c197762c08cbccd814844648e981b2_icgraph">
+<area shape="rect" id="node2" href="classconfig.html#a70cd76ae2b5eaf70f434e839a7db8b70" title="config::init" alt="" coords="168,5,251,32"/><area shape="rect" id="node3" href="classcontrol.html#ad2d147565c80f1e29dda79bb3ea86ec5" title="control::init_config" alt="" coords="299,5,427,32"/><area shape="rect" id="node4" href="classcontrol.html#a98f7dc96d3f361a9d9d1182deae51972" title="control::init" alt="" coords="475,5,562,32"/><area shape="rect" id="node5" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="611,5,661,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <a class="anchor" id="a70cd76ae2b5eaf70f434e839a7db8b70"></a>
 <div class="memitem">
 <div class="memproto">
@@ -250,6 +285,15 @@ Here is the caller graph for this function:</div>
 </div><div class="memdoc">
 
 <p>Definition at line <a class="el" href="config_8cpp_source.html#l00072">72</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classconfig_a70cd76ae2b5eaf70f434e839a7db8b70_cgraph.png" border="0" usemap="#classconfig_a70cd76ae2b5eaf70f434e839a7db8b70_cgraph" alt=""/></div>
+<map name="classconfig_a70cd76ae2b5eaf70f434e839a7db8b70_cgraph" id="classconfig_a70cd76ae2b5eaf70f434e839a7db8b70_cgraph">
+<area shape="rect" id="node2" href="classconfig.html#a35320a7df595c3215b0724444f878258" title="config::stripComment" alt="" coords="136,5,283,32"/><area shape="rect" id="node3" href="classconfig.html#a04c197762c08cbccd814844648e981b2" title="config::getWord" alt="" coords="152,56,267,83"/></map>
+</div>
+</p>
 
 <p><div class="dynheader">
 Here is the caller graph for this function:</div>
@@ -288,6 +332,33 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="a35320a7df595c3215b0724444f878258"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void config::stripComment </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>str</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="config_8cpp_source.html#l00059">59</a> of file <a class="el" href="config_8cpp_source.html">config.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classconfig_a35320a7df595c3215b0724444f878258_icgraph.png" border="0" usemap="#classconfig_a35320a7df595c3215b0724444f878258_icgraph" alt=""/></div>
+<map name="classconfig_a35320a7df595c3215b0724444f878258_icgraph" id="classconfig_a35320a7df595c3215b0724444f878258_icgraph">
+<area shape="rect" id="node2" href="classconfig.html#a70cd76ae2b5eaf70f434e839a7db8b70" title="config::init" alt="" coords="200,5,283,32"/><area shape="rect" id="node3" href="classcontrol.html#ad2d147565c80f1e29dda79bb3ea86ec5" title="control::init_config" alt="" coords="331,5,459,32"/><area shape="rect" id="node4" href="classcontrol.html#a98f7dc96d3f361a9d9d1182deae51972" title="control::init" alt="" coords="507,5,594,32"/><area shape="rect" id="node5" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="643,5,693,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="af733c3a7ceffcd6507f50636b454286a"></a>
 <div class="memitem">
@@ -317,6 +388,20 @@ Here is the caller graph for this function:</div>
 
 </div>
 </div>
+<a class="anchor" id="a0e9b0962c79ec328511e48a732df3b5e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, std::string&gt; config::mapper</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="config_8hpp_source.html#l00010">10</a> of file <a class="el" href="config_8hpp_source.html">config.hpp</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>src/config/<a class="el" href="config_8hpp_source.html">config.hpp</a></li>
 <li>src/config/<a class="el" href="config_8cpp_source.html">config.cpp</a></li>
@@ -327,7 +412,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classconfig.html">config</a></li>
-    <li class="footer">Generated on Thu Aug 21 2014 16:57:32 for pulse by
+    <li class="footer">Generated on Thu Aug 21 2014 17:04:33 for pulse by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -13,5 +13,7 @@ var searchData=
   ['control',['control',['../classcontrol.html',1,'control'],['../classcontrol.html#a48167309b51b6e29db1b794ebbe6b351',1,'control::control()']]],
   ['control_2ecpp',['control.cpp',['../control_8cpp.html',1,'']]],
   ['control_2ehpp',['control.hpp',['../control_8hpp.html',1,'']]],
+  ['cstrtostr',['cstrTostr',['../classsock__int.html#ad24322cd1ac98079870441d7c8f95e96',1,'sock_int']]],
+  ['curr',['curr',['../classsock__int.html#a74f6557985d50f5e317ec7a3e5dedc0a',1,'sock_int']]],
   ['current_5fresponses',['current_responses',['../class_q_u_e_s_t_i_o_n.html#a58137afeb0a312587490420691e97e32',1,'QUESTION']]]
 ];

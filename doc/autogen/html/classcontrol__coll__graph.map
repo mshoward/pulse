@@ -1,4 +1,5 @@
 <map id="control" name="control">
 <area shape="rect" id="node2" href="$classconfig.html" title="config" alt="" coords="5,125,61,152"/>
 <area shape="rect" id="node3" href="$classsock__int.html" title="sock_int" alt="" coords="107,125,177,152"/>
+<area shape="rect" id="node4" href="$structsock__int_1_1buf.html" title="sock_int::buf" alt="" coords="43,5,140,32"/>
 </map>

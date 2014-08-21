@@ -4,7 +4,7 @@ class config
 {
 public:
 
-private:
+public:
 	std::string getWord(std::string &str);
 	void stripComment(std::string &str);
 	std::map<std::string, std::string> mapper;

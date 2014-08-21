@@ -1,8 +1,10 @@
 <map id="control::init_sock" name="control::init_sock">
-<area shape="rect" id="node2" href="$classsock__int.html#a82f3b86f40bc73faaeddd2e9e345c15b" title="sock_int::init" alt="" coords="216,5,312,32"/>
-<area shape="rect" id="node4" href="$classsock__int.html#a5e4e93e8ef28b802a5acf8a093c47226" title="sock_int::start" alt="" coords="211,56,317,83"/>
-<area shape="rect" id="node5" href="$classsock__int.html#aa7e285d845024e849f5821fcc000e5dd" title="sock_int::startAndDetatch\lAcceptAndReadThread" alt="" coords="177,107,351,149"/>
+<area shape="rect" id="node2" href="$classsock__int.html#a82f3b86f40bc73faaeddd2e9e345c15b" title="sock_int::init" alt="" coords="216,56,312,83"/>
+<area shape="rect" id="node5" href="$classsock__int.html#a5e4e93e8ef28b802a5acf8a093c47226" title="sock_int::start" alt="" coords="454,107,559,133"/>
+<area shape="rect" id="node6" href="$classsock__int.html#aa7e285d845024e849f5821fcc000e5dd" title="sock_int::startAndDetatch\lAcceptAndReadThread" alt="" coords="177,158,351,199"/>
 <area shape="rect" id="node3" href="$classsock__int.html#ab1cdd237c861407a378947b9a69fcb3d" title="sock_int::setName" alt="" coords="441,5,573,32"/>
-<area shape="rect" id="node6" href="$classsock__int.html#aee4e82d455760cd259eee28b9c68bbb3" title="sock_int::acceptAndReadThread" alt="" coords="401,115,613,141"/>
-<area shape="rect" id="node7" href="$classsock__int.html#a43ec39bf98b73b756b74cd5390c9aa61" title="sock_int::acceptConnection" alt="" coords="661,115,845,141"/>
+<area shape="rect" id="node4" href="$classsock__int.html#a57aea31cc3f06df8cf3e52210e8f7cb9" title="sock_int::printmsg" alt="" coords="894,107,1023,133"/>
+<area shape="rect" id="node7" href="$classsock__int.html#aee4e82d455760cd259eee28b9c68bbb3" title="sock_int::acceptAndReadThread" alt="" coords="401,165,613,192"/>
+<area shape="rect" id="node8" href="$classsock__int.html#a43ec39bf98b73b756b74cd5390c9aa61" title="sock_int::acceptConnection" alt="" coords="661,157,845,184"/>
+<area shape="rect" id="node9" href="$classsock__int.html#ad24322cd1ac98079870441d7c8f95e96" title="sock_int::cstrTostr" alt="" coords="688,208,819,235"/>
 </map>

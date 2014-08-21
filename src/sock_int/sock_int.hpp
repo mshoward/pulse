@@ -34,7 +34,7 @@ public:
 	
 	
 	
-private:
+public:
 	static buf emptyBuf; //I don't remember why I put this here, but I'm afraid to delete because it's late
 	
 	int 			stopReadThreadSig;
