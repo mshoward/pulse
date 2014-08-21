@@ -8,6 +8,7 @@ var classsock__int =
     [ "hasUnreadData", "classsock__int.html#a9becfbdc30e3f7d2f07dfe9f5762e5d9", null ],
     [ "init", "classsock__int.html#adb61077bcbe297edd1a093569b78193f", null ],
     [ "isReading", "classsock__int.html#ad5e561939f40895fd8a380da1d698a47", null ],
+    [ "NextLine", "classsock__int.html#a0fd7a391e99f1f90b419a8a3ac1da89a", null ],
     [ "outputData", "classsock__int.html#aa51c89a187a3d405c85746dbc32c16a9", null ],
     [ "readOnceFromConnection", "classsock__int.html#a3abe73040d016234662d0e070fae54f4", null ],
     [ "start", "classsock__int.html#a5e4e93e8ef28b802a5acf8a093c47226", null ],
@@ -24,5 +25,6 @@ var classsock__int =
     [ "portno", "classsock__int.html#ac7a58f837af1c1b1d4b44025bd28b501", null ],
     [ "serv_addr", "classsock__int.html#a23fd5ed58e0d7d59058a39bd3b209f16", null ],
     [ "sockfd", "classsock__int.html#a27ac0a8efdd5d7a07da3147e4a2c7d62", null ],
-    [ "storage", "classsock__int.html#a3791297fc4369d8b1396714009cfe85e", null ]
+    [ "storage", "classsock__int.html#a3791297fc4369d8b1396714009cfe85e", null ],
+    [ "threadStopped", "classsock__int.html#ac32fa6eb3ebaf881da67c3e5fed432db", null ]
 ];

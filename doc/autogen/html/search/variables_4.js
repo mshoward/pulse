@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['n',['n',['../classsock__int.html#a60e098abaf9d431281040466a268bf9a',1,'sock_int']]],
-  ['newsockfd',['newsockfd',['../classsock__int.html#a2487ef6538790cbd24706bd9b9e196b6',1,'sock_int']]]
+  ['mysql_5fport',['mysql_port',['../classcontrol.html#abc33adb5df27dd1baa1c4141d5420eb4',1,'control']]],
+  ['mysql_5fserver_5fport',['mysql_server_port',['../classcontrol.html#a81315ef152b499be4a46292d58b787c6',1,'control']]]
 ];

@@ -2,6 +2,7 @@
 #define PULSE_DEBUG
 #include "includes.hpp"
 
+void pmsg(std::string str);
 
 //class declarations
 #include "defs.hpp"

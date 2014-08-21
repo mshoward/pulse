@@ -107,53 +107,59 @@ $(document).ready(function(){initNavTree('control_8hpp_source.html','');});
 </div><!--header-->
 <div class="contents">
 <a href="control_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="keyword">class </span><a class="code" href="classcontrol.html">control</a></div>
+<div class="line"><a name="l00002"></a><span class="lineno"><a class="line" href="classcontrol.html">    2</a></span>&#160;<span class="preprocessor"></span><span class="keyword">class </span><a class="code" href="classcontrol.html">control</a></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;{</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcontrol.html#a3068e1430b662c2a51d95cb45f279521">errorNo</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="classcontrol.html#a3068e1430b662c2a51d95cb45f279521">    5</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcontrol.html#a3068e1430b662c2a51d95cb45f279521">errorNo</a>;</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordtype">int</span> config_state;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">int</span> sock_state;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">int</span> init_sock();</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">int</span> init_config();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcontrol.html#abb8d80f856354f92f0b1d11e27d0999f">out_port</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcontrol.html#abc33adb5df27dd1baa1c4141d5420eb4">mysql_port</a>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classsock__int.html">sock_int</a> <a class="code" href="classcontrol.html#abd587003ea26c1901adb18a0c2142b9c">out_server_port</a>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="classsock__int.html">sock_int</a> <a class="code" href="classcontrol.html#a81315ef152b499be4a46292d58b787c6">mysql_server_port</a>; <span class="comment">//unsure about this</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classconfig.html">config</a> <a class="code" href="classcontrol.html#a8b01203776f0d04192f7bc70a63460bd">configuration</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcontrol.html#a946dbe2c264959e286d3540c60f4b117">init_sock</a>();</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcontrol.html#ad2d147565c80f1e29dda79bb3ea86ec5">init_config</a>();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classcontrol.html#abb8d80f856354f92f0b1d11e27d0999f">   16</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcontrol.html#abb8d80f856354f92f0b1d11e27d0999f">out_port</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classcontrol.html#abc33adb5df27dd1baa1c4141d5420eb4">   17</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcontrol.html#abc33adb5df27dd1baa1c4141d5420eb4">mysql_port</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classcontrol.html#a43b3053ce2394419bec737cb4a867be9">   19</a></span>&#160;    <a class="code" href="classsock__int.html">sock_int</a> <a class="code" href="classcontrol.html#a43b3053ce2394419bec737cb4a867be9">dirty_sock</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classcontrol.html#a81315ef152b499be4a46292d58b787c6">   20</a></span>&#160;    <a class="code" href="classsock__int.html">sock_int</a> <a class="code" href="classcontrol.html#a81315ef152b499be4a46292d58b787c6">mysql_server_port</a>; <span class="comment">//unsure about this</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classcontrol.html#a48167309b51b6e29db1b794ebbe6b351">control</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classcontrol.html#ad5d0ca9865cef4014e455892da21258f">~control</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcontrol.html#a98f7dc96d3f361a9d9d1182deae51972">init</a>();</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classcontrol.html#a8b01203776f0d04192f7bc70a63460bd">   22</a></span>&#160;    <a class="code" href="classconfig.html">config</a> <a class="code" href="classcontrol.html#a8b01203776f0d04192f7bc70a63460bd">configuration</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classcontrol.html#a48167309b51b6e29db1b794ebbe6b351">   24</a></span>&#160;    <a class="code" href="classcontrol.html#a48167309b51b6e29db1b794ebbe6b351">control</a>(){}</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classcontrol.html#ad5d0ca9865cef4014e455892da21258f">   25</a></span>&#160;    <a class="code" href="classcontrol.html#ad5d0ca9865cef4014e455892da21258f">~control</a>(){}</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};<span class="comment">//replace control.hpp with this declaration</span></div>
-<div class="ttc" id="classcontrol_html_ad5d0ca9865cef4014e455892da21258f"><div class="ttname"><a href="classcontrol.html#ad5d0ca9865cef4014e455892da21258f">control::~control</a></div><div class="ttdeci">~control()</div></div>
-<div class="ttc" id="classcontrol_html"><div class="ttname"><a href="classcontrol.html">control</a></div><div class="ttdef"><b>Definition:</b> <a href="control_8cpp_source.html#l00003">control.cpp:3</a></div></div>
-<div class="ttc" id="classcontrol_html_a98f7dc96d3f361a9d9d1182deae51972"><div class="ttname"><a href="classcontrol.html#a98f7dc96d3f361a9d9d1182deae51972">control::init</a></div><div class="ttdeci">int init()</div><div class="ttdef"><b>Definition:</b> <a href="control_8cpp_source.html#l00087">control.cpp:87</a></div></div>
-<div class="ttc" id="classcontrol_html_a81315ef152b499be4a46292d58b787c6"><div class="ttname"><a href="classcontrol.html#a81315ef152b499be4a46292d58b787c6">control::mysql_server_port</a></div><div class="ttdeci">sock_int mysql_server_port</div><div class="ttdef"><b>Definition:</b> <a href="control_8cpp_source.html#l00019">control.cpp:19</a></div></div>
-<div class="ttc" id="classcontrol_html_abc33adb5df27dd1baa1c4141d5420eb4"><div class="ttname"><a href="classcontrol.html#abc33adb5df27dd1baa1c4141d5420eb4">control::mysql_port</a></div><div class="ttdeci">int mysql_port</div><div class="ttdef"><b>Definition:</b> <a href="control_8cpp_source.html#l00017">control.cpp:17</a></div></div>
-<div class="ttc" id="classcontrol_html_abd587003ea26c1901adb18a0c2142b9c"><div class="ttname"><a href="classcontrol.html#abd587003ea26c1901adb18a0c2142b9c">control::out_server_port</a></div><div class="ttdeci">sock_int out_server_port</div><div class="ttdef"><b>Definition:</b> <a href="control_8cpp_source.html#l00018">control.cpp:18</a></div></div>
-<div class="ttc" id="classcontrol_html_a48167309b51b6e29db1b794ebbe6b351"><div class="ttname"><a href="classcontrol.html#a48167309b51b6e29db1b794ebbe6b351">control::control</a></div><div class="ttdeci">control()</div></div>
-<div class="ttc" id="classcontrol_html_a8b01203776f0d04192f7bc70a63460bd"><div class="ttname"><a href="classcontrol.html#a8b01203776f0d04192f7bc70a63460bd">control::configuration</a></div><div class="ttdeci">config configuration</div><div class="ttdef"><b>Definition:</b> <a href="control_8cpp_source.html#l00021">control.cpp:21</a></div></div>
-<div class="ttc" id="classcontrol_html_a3068e1430b662c2a51d95cb45f279521"><div class="ttname"><a href="classcontrol.html#a3068e1430b662c2a51d95cb45f279521">control::errorNo</a></div><div class="ttdeci">int errorNo</div><div class="ttdef"><b>Definition:</b> <a href="control_8cpp_source.html#l00006">control.cpp:6</a></div></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classcontrol.html#a98f7dc96d3f361a9d9d1182deae51972">init</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classcontrol.html#a3a4d2e81bf5e2684edbd79dfbdeca434">dirty_sock_connected</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::string <a class="code" href="classcontrol.html#a0297b6e5fb4cce8b267940a7e550da17">Next_dirty_sock_line</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};<span class="comment">//replace control.hpp with this declaration</span></div>
+<div class="ttc" id="classcontrol_html_ad5d0ca9865cef4014e455892da21258f"><div class="ttname"><a href="classcontrol.html#ad5d0ca9865cef4014e455892da21258f">control::~control</a></div><div class="ttdeci">~control()</div><div class="ttdef"><b>Definition:</b> <a href="control_8hpp_source.html#l00025">control.hpp:25</a></div></div>
+<div class="ttc" id="classcontrol_html"><div class="ttname"><a href="classcontrol.html">control</a></div><div class="ttdef"><b>Definition:</b> <a href="control_8hpp_source.html#l00002">control.hpp:2</a></div></div>
+<div class="ttc" id="classcontrol_html_a98f7dc96d3f361a9d9d1182deae51972"><div class="ttname"><a href="classcontrol.html#a98f7dc96d3f361a9d9d1182deae51972">control::init</a></div><div class="ttdeci">int init()</div><div class="ttdef"><b>Definition:</b> <a href="control_8cpp_source.html#l00092">control.cpp:92</a></div></div>
+<div class="ttc" id="classcontrol_html_ad2d147565c80f1e29dda79bb3ea86ec5"><div class="ttname"><a href="classcontrol.html#ad2d147565c80f1e29dda79bb3ea86ec5">control::init_config</a></div><div class="ttdeci">int init_config()</div><div class="ttdef"><b>Definition:</b> <a href="control_8cpp_source.html#l00073">control.cpp:73</a></div></div>
+<div class="ttc" id="classcontrol_html_a81315ef152b499be4a46292d58b787c6"><div class="ttname"><a href="classcontrol.html#a81315ef152b499be4a46292d58b787c6">control::mysql_server_port</a></div><div class="ttdeci">sock_int mysql_server_port</div><div class="ttdef"><b>Definition:</b> <a href="control_8hpp_source.html#l00020">control.hpp:20</a></div></div>
+<div class="ttc" id="classcontrol_html_abc33adb5df27dd1baa1c4141d5420eb4"><div class="ttname"><a href="classcontrol.html#abc33adb5df27dd1baa1c4141d5420eb4">control::mysql_port</a></div><div class="ttdeci">int mysql_port</div><div class="ttdef"><b>Definition:</b> <a href="control_8hpp_source.html#l00017">control.hpp:17</a></div></div>
+<div class="ttc" id="classcontrol_html_a48167309b51b6e29db1b794ebbe6b351"><div class="ttname"><a href="classcontrol.html#a48167309b51b6e29db1b794ebbe6b351">control::control</a></div><div class="ttdeci">control()</div><div class="ttdef"><b>Definition:</b> <a href="control_8hpp_source.html#l00024">control.hpp:24</a></div></div>
+<div class="ttc" id="classcontrol_html_a8b01203776f0d04192f7bc70a63460bd"><div class="ttname"><a href="classcontrol.html#a8b01203776f0d04192f7bc70a63460bd">control::configuration</a></div><div class="ttdeci">config configuration</div><div class="ttdef"><b>Definition:</b> <a href="control_8hpp_source.html#l00022">control.hpp:22</a></div></div>
+<div class="ttc" id="classcontrol_html_a3068e1430b662c2a51d95cb45f279521"><div class="ttname"><a href="classcontrol.html#a3068e1430b662c2a51d95cb45f279521">control::errorNo</a></div><div class="ttdeci">int errorNo</div><div class="ttdef"><b>Definition:</b> <a href="control_8hpp_source.html#l00005">control.hpp:5</a></div></div>
+<div class="ttc" id="classcontrol_html_a0297b6e5fb4cce8b267940a7e550da17"><div class="ttname"><a href="classcontrol.html#a0297b6e5fb4cce8b267940a7e550da17">control::Next_dirty_sock_line</a></div><div class="ttdeci">std::string Next_dirty_sock_line()</div><div class="ttdef"><b>Definition:</b> <a href="control_8cpp_source.html#l00109">control.cpp:109</a></div></div>
 <div class="ttc" id="classconfig_html"><div class="ttname"><a href="classconfig.html">config</a></div><div class="ttdef"><b>Definition:</b> <a href="config_8hpp_source.html#l00003">config.hpp:3</a></div></div>
-<div class="ttc" id="classcontrol_html_abb8d80f856354f92f0b1d11e27d0999f"><div class="ttname"><a href="classcontrol.html#abb8d80f856354f92f0b1d11e27d0999f">control::out_port</a></div><div class="ttdeci">int out_port</div><div class="ttdef"><b>Definition:</b> <a href="control_8cpp_source.html#l00016">control.cpp:16</a></div></div>
-<div class="ttc" id="classsock__int_html"><div class="ttname"><a href="classsock__int.html">sock_int</a></div><div class="ttdef"><b>Definition:</b> <a href="sock__int_8hpp_source.html#l00024">sock_int.hpp:24</a></div></div>
+<div class="ttc" id="classcontrol_html_abb8d80f856354f92f0b1d11e27d0999f"><div class="ttname"><a href="classcontrol.html#abb8d80f856354f92f0b1d11e27d0999f">control::out_port</a></div><div class="ttdeci">int out_port</div><div class="ttdef"><b>Definition:</b> <a href="control_8hpp_source.html#l00016">control.hpp:16</a></div></div>
+<div class="ttc" id="classsock__int_html"><div class="ttname"><a href="classsock__int.html">sock_int</a></div><div class="ttdef"><b>Definition:</b> <a href="sock__int_8hpp_source.html#l00023">sock_int.hpp:23</a></div></div>
+<div class="ttc" id="classcontrol_html_a946dbe2c264959e286d3540c60f4b117"><div class="ttname"><a href="classcontrol.html#a946dbe2c264959e286d3540c60f4b117">control::init_sock</a></div><div class="ttdeci">int init_sock()</div><div class="ttdef"><b>Definition:</b> <a href="control_8cpp_source.html#l00058">control.cpp:58</a></div></div>
+<div class="ttc" id="classcontrol_html_a43b3053ce2394419bec737cb4a867be9"><div class="ttname"><a href="classcontrol.html#a43b3053ce2394419bec737cb4a867be9">control::dirty_sock</a></div><div class="ttdeci">sock_int dirty_sock</div><div class="ttdef"><b>Definition:</b> <a href="control_8hpp_source.html#l00019">control.hpp:19</a></div></div>
+<div class="ttc" id="classcontrol_html_a3a4d2e81bf5e2684edbd79dfbdeca434"><div class="ttname"><a href="classcontrol.html#a3a4d2e81bf5e2684edbd79dfbdeca434">control::dirty_sock_connected</a></div><div class="ttdeci">bool dirty_sock_connected()</div><div class="ttdef"><b>Definition:</b> <a href="control_8cpp_source.html#l00104">control.cpp:104</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_b81b067251166617f9d0a8c0cfc3a4a9.html">control</a></li><li class="navelem"><a class="el" href="control_8hpp.html">control.hpp</a></li>
-    <li class="footer">Generated on Thu Aug 21 2014 10:59:39 for pulse by
+    <li class="footer">Generated on Thu Aug 21 2014 14:42:51 for pulse by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -8,6 +8,7 @@ private:
 	int config_state;
 	int sock_state;
 	
+public:
 	int init_sock();
 	int init_config();
 	
@@ -16,7 +17,7 @@ public:
 	int mysql_port;
 	
 	sock_int dirty_sock;
-	sock_int mysql_server_port; //unsure about this
+	//sock_int mysql_server_port; //unsure about this
 	
 	config configuration;
 	

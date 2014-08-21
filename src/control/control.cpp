@@ -60,7 +60,7 @@ int control::init_sock()
 	int ret = 0;
 	if(config_state)
 	{
-		dirty_sock.init();
+		dirty_sock.init("dirty sock");
 		dirty_sock.start(out_port);
 		dirty_sock.startAndDetatchAcceptAndReadThread();
 		ret = dirty_sock.errorNo;
@@ -77,7 +77,7 @@ int control::init_config()
 	{
 		configuration.print_All();
 		std::string dirty_sock_port = configuration.get("out_server_port");
-		std::cout << "dirty_sock port: " << dirty_sock_port << std::endl;
+		//std::cout << "dirty_sock port: " << dirty_sock_port << std::endl;
 		out_port = std::stoi(configuration.get("out_server_port"));
 		mysql_port = std::stoi(configuration.get("mysql_server_port"));
 		config_state++;

@@ -45,9 +45,10 @@ private:
 	
 
 public:
-	int 			threadStopped;
+	int threadStopped;
 	int sockfd; //socket file descriptor
 	int newsockfd; //new socket file descriptor
+	std::string name;
 	std::string output; //FIFO queue for outputting reads to the rest of the program
 	std::queue<std::string> storage;
 	int portno; //port number
@@ -65,8 +66,8 @@ public:
 	sock_int();
 	~sock_int();
 	
-	int init();//call this first
-	
+	int init(std::string str);//call this first
+	void setName(std::string str);
 	int start(int thisPort);//call second
 	int acceptConnection();
 	int startAndDetatchAcceptAndReadThread();

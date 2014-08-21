@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['error',['error',['../client_2client_8c.html#aad9796c174f7ef5d226cd169f2520fd5',1,'error(char *msg):&#160;client.c'],['../server_8c.html#aad9796c174f7ef5d226cd169f2520fd5',1,'error(char *msg):&#160;server.c'],['../examples_2sock__int_01example_2client_8c.html#aad9796c174f7ef5d226cd169f2520fd5',1,'error(char *msg):&#160;client.c']]]
+  ['dirty_5fsock_5fconnected',['dirty_sock_connected',['../classcontrol.html#a3a4d2e81bf5e2684edbd79dfbdeca434',1,'control']]]
 ];

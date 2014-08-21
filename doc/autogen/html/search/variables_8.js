@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['requested_5fresponses',['requested_responses',['../class_q_u_e_s_t_i_o_n.html#acff3fe85e3ef74a0dc3612c098b68de4',1,'QUESTION']]]
+  ['question_5fid',['question_id',['../class_q_u_e_s_t_i_o_n.html#a577b51e4a0603bda194f3e61b62b6839',1,'QUESTION']]],
+  ['question_5ftext',['question_text',['../class_q_u_e_s_t_i_o_n.html#a9c000a8b0d6d3615b3cec5766eda2dba',1,'QUESTION']]]
 ];

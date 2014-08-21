@@ -118,8 +118,6 @@ $(document).ready(function(){initNavTree('classsock__int.html','');});
 Collaboration diagram for sock_int:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsock__int__coll__graph.png" border="0" usemap="#sock__int_coll__map" alt="Collaboration graph"/></div>
-<map name="sock__int_coll__map" id="sock__int_coll__map">
-</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
@@ -149,6 +147,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aee4e82d455760cd259eee28b9c68bbb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa51c89a187a3d405c85746dbc32c16a9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsock__int.html#aa51c89a187a3d405c85746dbc32c16a9">outputData</a> ()</td></tr>
 <tr class="separator:aa51c89a187a3d405c85746dbc32c16a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fd7a391e99f1f90b419a8a3ac1da89a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsock__int.html#a0fd7a391e99f1f90b419a8a3ac1da89a">NextLine</a> ()</td></tr>
+<tr class="separator:a0fd7a391e99f1f90b419a8a3ac1da89a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5e561939f40895fd8a380da1d698a47"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsock__int.html#ad5e561939f40895fd8a380da1d698a47">isReading</a> ()</td></tr>
 <tr class="memdesc:ad5e561939f40895fd8a380da1d698a47"><td class="mdescLeft">&#160;</td><td class="mdescRight">State Queries ///.  <a href="#ad5e561939f40895fd8a380da1d698a47">More...</a><br/></td></tr>
 <tr class="separator:ad5e561939f40895fd8a380da1d698a47"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,6 +157,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:ac32fa6eb3ebaf881da67c3e5fed432db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsock__int.html#ac32fa6eb3ebaf881da67c3e5fed432db">threadStopped</a></td></tr>
+<tr class="separator:ac32fa6eb3ebaf881da67c3e5fed432db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27ac0a8efdd5d7a07da3147e4a2c7d62"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsock__int.html#a27ac0a8efdd5d7a07da3147e4a2c7d62">sockfd</a></td></tr>
 <tr class="separator:a27ac0a8efdd5d7a07da3147e4a2c7d62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2487ef6538790cbd24706bd9b9e196b6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsock__int.html#a2487ef6538790cbd24706bd9b9e196b6">newsockfd</a></td></tr>
@@ -190,13 +192,12 @@ Public Attributes</h2></td></tr>
 <ul>
 <li><a class="el" href="classsock__int.html#adb61077bcbe297edd1a093569b78193f">init()</a></li>
 <li><a class="el" href="classsock__int.html#a5e4e93e8ef28b802a5acf8a093c47226">start()</a></li>
-<li><a class="el" href="classsock__int.html#a43ec39bf98b73b756b74cd5390c9aa61">acceptConnection()</a></li>
-<li>startAndDetatchReadThread()</li>
+<li><a class="el" href="classsock__int.html#aa7e285d845024e849f5821fcc000e5dd">startAndDetatchAcceptAndReadThread()</a></li>
 <li>read from the output queue object until time to quit</li>
 <li>then call <a class="el" href="classsock__int.html#a87b717df109ceb0322effd7cf48cd3f9">stopReadThread()</a> - stopReadThread blocks until the reading thread has stopped. </li>
 </ul>
 
-<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00024">24</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00023">23</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="af56c50ca9b505feee5290881486e4a65"></a>
 <div class="memitem">
@@ -262,7 +263,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsock__int_aee4e82d455760cd259eee28b9c68bbb3_icgraph.png" border="0" usemap="#classsock__int_aee4e82d455760cd259eee28b9c68bbb3_icgraph" alt=""/></div>
 <map name="classsock__int_aee4e82d455760cd259eee28b9c68bbb3_icgraph" id="classsock__int_aee4e82d455760cd259eee28b9c68bbb3_icgraph">
-<area shape="rect" id="node2" href="classsock__int.html#aa7e285d845024e849f5821fcc000e5dd" title="sock_int::startAndDetatch\lAcceptAndReadThread" alt="" coords="267,5,442,46"/><area shape="rect" id="node3" href="examples_2sock__int_01example_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="491,12,541,39"/></map>
+<area shape="rect" id="node2" href="classsock__int.html#aa7e285d845024e849f5821fcc000e5dd" title="sock_int::startAndDetatch\lAcceptAndReadThread" alt="" coords="267,23,442,65"/><area shape="rect" id="node3" href="classcontrol.html#a946dbe2c264959e286d3540c60f4b117" title="control::init_sock" alt="" coords="491,5,613,32"/><area shape="rect" id="node6" href="examples_2sock__int_01example_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="527,56,577,83"/><area shape="rect" id="node4" href="classcontrol.html#a98f7dc96d3f361a9d9d1182deae51972" title="control::init" alt="" coords="662,5,749,32"/><area shape="rect" id="node5" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="797,5,848,32"/></map>
 </div>
 </p>
 
@@ -288,7 +289,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsock__int_a43ec39bf98b73b756b74cd5390c9aa61_icgraph.png" border="0" usemap="#classsock__int_a43ec39bf98b73b756b74cd5390c9aa61_icgraph" alt=""/></div>
 <map name="classsock__int_a43ec39bf98b73b756b74cd5390c9aa61_icgraph" id="classsock__int_a43ec39bf98b73b756b74cd5390c9aa61_icgraph">
-<area shape="rect" id="node2" href="classsock__int.html#aee4e82d455760cd259eee28b9c68bbb3" title="sock_int::acceptAndReadThread" alt="" coords="238,12,450,39"/><area shape="rect" id="node3" href="classsock__int.html#aa7e285d845024e849f5821fcc000e5dd" title="sock_int::startAndDetatch\lAcceptAndReadThread" alt="" coords="499,5,674,46"/><area shape="rect" id="node4" href="examples_2sock__int_01example_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="723,12,773,39"/></map>
+<area shape="rect" id="node2" href="classsock__int.html#aee4e82d455760cd259eee28b9c68bbb3" title="sock_int::acceptAndReadThread" alt="" coords="238,31,450,57"/><area shape="rect" id="node3" href="classsock__int.html#aa7e285d845024e849f5821fcc000e5dd" title="sock_int::startAndDetatch\lAcceptAndReadThread" alt="" coords="499,23,674,65"/><area shape="rect" id="node4" href="classcontrol.html#a946dbe2c264959e286d3540c60f4b117" title="control::init_sock" alt="" coords="723,5,845,32"/><area shape="rect" id="node7" href="examples_2sock__int_01example_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="759,56,809,83"/><area shape="rect" id="node5" href="classcontrol.html#a98f7dc96d3f361a9d9d1182deae51972" title="control::init" alt="" coords="894,5,981,32"/><area shape="rect" id="node6" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="1029,5,1080,32"/></map>
 </div>
 </p>
 
@@ -340,7 +341,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsock__int_adb61077bcbe297edd1a093569b78193f_icgraph.png" border="0" usemap="#classsock__int_adb61077bcbe297edd1a093569b78193f_icgraph" alt=""/></div>
 <map name="classsock__int_adb61077bcbe297edd1a093569b78193f_icgraph" id="classsock__int_adb61077bcbe297edd1a093569b78193f_icgraph">
-<area shape="rect" id="node2" href="examples_2sock__int_01example_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="149,5,200,32"/></map>
+<area shape="rect" id="node2" href="classcontrol.html#a946dbe2c264959e286d3540c60f4b117" title="control::init_sock" alt="" coords="150,5,271,32"/><area shape="rect" id="node5" href="examples_2sock__int_01example_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="185,56,236,83"/><area shape="rect" id="node3" href="classcontrol.html#a98f7dc96d3f361a9d9d1182deae51972" title="control::init" alt="" coords="321,5,407,32"/><area shape="rect" id="node4" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="456,5,507,32"/></map>
 </div>
 </p>
 
@@ -370,6 +371,33 @@ Here is the caller graph for this function:</div>
 <div class="center"><img src="classsock__int_ad5e561939f40895fd8a380da1d698a47_icgraph.png" border="0" usemap="#classsock__int_ad5e561939f40895fd8a380da1d698a47_icgraph" alt=""/></div>
 <map name="classsock__int_ad5e561939f40895fd8a380da1d698a47_icgraph" id="classsock__int_ad5e561939f40895fd8a380da1d698a47_icgraph">
 <area shape="rect" id="node2" href="examples_2sock__int_01example_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="192,5,243,32"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a0fd7a391e99f1f90b419a8a3ac1da89a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string sock_int::NextLine </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>debug code if(!storage.empty()) std::cout &lt;&lt; "Continuing\nNew buffer holds: '" &lt;&lt; storage.front() &lt;&lt; "'" &lt;&lt; std::endl; end debug code </p>
+
+<p>Definition at line <a class="el" href="sock__int_8cpp_source.html#l00213">213</a> of file <a class="el" href="sock__int_8cpp_source.html">sock_int.cpp</a>.</p>
+
+<p><div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsock__int_a0fd7a391e99f1f90b419a8a3ac1da89a_icgraph.png" border="0" usemap="#classsock__int_a0fd7a391e99f1f90b419a8a3ac1da89a_icgraph" alt=""/></div>
+<map name="classsock__int_a0fd7a391e99f1f90b419a8a3ac1da89a_icgraph" id="classsock__int_a0fd7a391e99f1f90b419a8a3ac1da89a_icgraph">
+<area shape="rect" id="node2" href="classcontrol.html#a0297b6e5fb4cce8b267940a7e550da17" title="control::Next_dirty\l_sock_line" alt="" coords="185,5,314,46"/><area shape="rect" id="node3" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="363,12,413,39"/></map>
 </div>
 </p>
 
@@ -439,7 +467,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsock__int_a5e4e93e8ef28b802a5acf8a093c47226_icgraph.png" border="0" usemap="#classsock__int_a5e4e93e8ef28b802a5acf8a093c47226_icgraph" alt=""/></div>
 <map name="classsock__int_a5e4e93e8ef28b802a5acf8a093c47226_icgraph" id="classsock__int_a5e4e93e8ef28b802a5acf8a093c47226_icgraph">
-<area shape="rect" id="node2" href="examples_2sock__int_01example_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="160,5,211,32"/></map>
+<area shape="rect" id="node2" href="classcontrol.html#a946dbe2c264959e286d3540c60f4b117" title="control::init_sock" alt="" coords="161,5,282,32"/><area shape="rect" id="node5" href="examples_2sock__int_01example_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="196,56,247,83"/><area shape="rect" id="node3" href="classcontrol.html#a98f7dc96d3f361a9d9d1182deae51972" title="control::init" alt="" coords="331,5,418,32"/><area shape="rect" id="node4" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="467,5,517,32"/></map>
 </div>
 </p>
 
@@ -474,7 +502,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="classsock__int_aa7e285d845024e849f5821fcc000e5dd_icgraph.png" border="0" usemap="#classsock__int_aa7e285d845024e849f5821fcc000e5dd_icgraph" alt=""/></div>
 <map name="classsock__int_aa7e285d845024e849f5821fcc000e5dd_icgraph" id="classsock__int_aa7e285d845024e849f5821fcc000e5dd_icgraph">
-<area shape="rect" id="node2" href="examples_2sock__int_01example_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="229,12,280,39"/></map>
+<area shape="rect" id="node2" href="classcontrol.html#a946dbe2c264959e286d3540c60f4b117" title="control::init_sock" alt="" coords="230,5,351,32"/><area shape="rect" id="node5" href="examples_2sock__int_01example_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="265,56,316,83"/><area shape="rect" id="node3" href="classcontrol.html#a98f7dc96d3f361a9d9d1182deae51972" title="control::init" alt="" coords="401,5,487,32"/><area shape="rect" id="node4" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="main" alt="" coords="536,5,587,32"/></map>
 </div>
 </p>
 
@@ -508,7 +536,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00062">62</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00059">59</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
 
 </div>
 </div>
@@ -522,7 +550,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00065">65</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00062">62</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
 
 </div>
 </div>
@@ -536,7 +564,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00057">57</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00054">54</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
 
 </div>
 </div>
@@ -550,7 +578,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00066">66</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00063">63</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
 
 </div>
 </div>
@@ -564,7 +592,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00059">59</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00056">56</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
 
 </div>
 </div>
@@ -578,7 +606,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00058">58</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00055">55</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
 
 </div>
 </div>
@@ -592,7 +620,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00053">53</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00050">50</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
 
 </div>
 </div>
@@ -606,7 +634,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00054">54</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00051">51</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
 
 </div>
 </div>
@@ -620,7 +648,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00056">56</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00053">53</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
 
 </div>
 </div>
@@ -634,7 +662,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00064">64</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00061">61</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
 
 </div>
 </div>
@@ -648,7 +676,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00052">52</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00049">49</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
 
 </div>
 </div>
@@ -662,7 +690,21 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00055">55</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
+<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00052">52</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ac32fa6eb3ebaf881da67c3e5fed432db"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sock_int::threadStopped</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition at line <a class="el" href="sock__int_8hpp_source.html#l00048">48</a> of file <a class="el" href="sock__int_8hpp_source.html">sock_int.hpp</a>.</p>
 
 </div>
 </div>
@@ -676,7 +718,7 @@ Here is the caller graph for this function:</div>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="classsock__int.html">sock_int</a></li>
-    <li class="footer">Generated on Thu Aug 21 2014 10:59:40 for pulse by
+    <li class="footer">Generated on Thu Aug 21 2014 14:42:52 for pulse by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['get',['get',['../classconfig.html#af7c820eb02bea75f66e91a4a3cad7626',1,'config::get(const char *str)'],['../classconfig.html#aa205f3368636e31fb50740d055a272eb',1,'config::get(std::string str)']]]
+  ['fillrand',['fillRand',['../client_2client_8c.html#a8c6250f6f563e9a793f0c4179027476c',1,'fillRand(char *buf, int bufSize, int i):&#160;client.c'],['../examples_2sock__int_01example_2client_8c.html#a8c6250f6f563e9a793f0c4179027476c',1,'fillRand(char *buf, int bufSize, int i):&#160;client.c']]],
+  ['fits',['fits',['../class_q_u_e_s_t_i_o_n.html#a16c22f8bdab6fae8237ad69ba2897c55',1,'QUESTION::fits(Demographic &amp;demo)'],['../class_q_u_e_s_t_i_o_n.html#a011cd8802e888602b54fbe5378c687d1',1,'QUESTION::fits(USER &amp;usr)']]]
 ];

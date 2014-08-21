@@ -104,7 +104,7 @@ int config::init()
 				//std::cout << "Val is: " << val << std::endl;
 				if(val != "")
 				{
-					std::cout << "mapping: " << prop << " to: " << val << std::endl;
+					//std::cout << "mapping: " << prop << " to: " << val << std::endl;
 					mapper[prop] = val;
 				}
 			}
@@ -134,12 +134,12 @@ std::string config::get(std::string str)
 
 void config::print_All()
 {
-	std::cout << "printing mapper: " << std::endl;
+	std::cout << "\nConfiguration: \n" << std::endl;
 	for (auto it = mapper.cbegin(); it != mapper.cend(); ++it)
 	{
 		std::cout << it->first << " : " << it->second << std::endl;
 	}
-	std::cout << "done printing!" << std::endl;
+	std::cout << std::endl;
 }
 ////////////////////////////////////////////////////
 /// State Queries ///

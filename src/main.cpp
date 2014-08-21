@@ -4,22 +4,26 @@
 void pmsg(std::string str)
 {
 	
-	std::cout << str << std::endl;
+	std::cout << str;
+	std::cout.flush();
 }
 
 int main(int argc, char *argv[])
 {
 	int er = 0;
+	pmsg("Creating Controller...");
 	control controller;
 	std::string bucket;
 	int previous = -1;
 	int errors = 0;
-	pmsg("Controller instantiated...");
+	pmsg(" done!\n");
+	pmsg("Initializing Controller...\n");
 	er = controller.init();
-	pmsg("Controller initialized...");
+	pmsg("\nInitialization Complete!\n");
 	if (!er)
 	{
-		pmsg("Controller successful!\t......\tReading...");
+		pmsg("Initialization successful!\n");
+		pmsg("Reading...\n");
 		while(controller.dirty_sock_connected())
 		{
 			bucket = controller.Next_dirty_sock_line();
@@ -42,6 +46,10 @@ int main(int argc, char *argv[])
 			if(bucket != "" && bucket != EMPTYSTRING)
 			std::cout << "After connection: " << bucket << "..."<< std::endl;
 		}
+	}
+	else
+	{
+		pmsg("Initialization failed");
 	}
 	return 0;
 }

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mysql_5fport',['mysql_port',['../classcontrol.html#abc33adb5df27dd1baa1c4141d5420eb4',1,'control']]],
-  ['mysql_5fserver_5fport',['mysql_server_port',['../classcontrol.html#a81315ef152b499be4a46292d58b787c6',1,'control']]]
+  ['errormsg',['errorMsg',['../classsock__int.html#ab7d167d166640f7754f20d5aa136c80d',1,'sock_int']]],
+  ['errorno',['errorNo',['../classconfig.html#a1dd32838ed9a980ad5ebd6c194dd64e0',1,'config::errorNo()'],['../classcontrol.html#a3068e1430b662c2a51d95cb45f279521',1,'control::errorNo()'],['../classsock__int.html#a0385fdfca67ab5199ca0fef7fd9000f7',1,'sock_int::errorNo()']]]
 ];

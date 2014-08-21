@@ -63,7 +63,7 @@ sock_int::sock_int()
 	threadStopped = 1;
 	memset(&buffer, 0, sizeof(buffer));
 	#ifdef PULSE_DEBUG
-	printmsg("sock_int created");
+	//printmsg("sock_int created");
 	#endif
 }
 sock_int::~sock_int()
@@ -73,8 +73,9 @@ sock_int::~sock_int()
 
 
 //errorNo = -1 == failure to open socket
-int sock_int::init()
+int sock_int::init(std::string str)
 {
+	setName(str);
 	sockfd = socket(AF_INET, SOCK_STREAM, 0);
 	if (sockfd < 0)
 	{
@@ -86,12 +87,17 @@ int sock_int::init()
 	serv_addr.sin_addr.s_addr = INADDR_ANY;
 	clilen = sizeof(cli_addr);
 	#ifdef PULSE_DEBUG
-	printmsg("sock_int initialized");;
+	printmsg(name + " initialized");;
 	#endif
 	//OutputStream.str(output);
 	curr = 0;
 	off = 0;
 	return errorNo;
+}
+
+void sock_int::setName(std::string str)
+{
+	name = str;
 }
 
 
@@ -100,7 +106,7 @@ int sock_int::init()
 int sock_int::start(int thisPort)
 {
 	#ifdef PULSE_DEBUG
-	printmsg("starting sock_int...");
+	printmsg("starting " + name + "...");
 	printmsg("with parameter " + std::to_string(thisPort));
 	#endif
 	portno = thisPort;
@@ -113,7 +119,7 @@ int sock_int::start(int thisPort)
 	}
 	listen(sockfd, 128);
 	#ifdef PULSE_DEBUG
-	printmsg("sock_int started");
+	printmsg(name + " started");
 	#endif
 	return errorNo;
 }
