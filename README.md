@@ -20,7 +20,7 @@
 ####Bugfixes:
 
 - Fixed output to only return one line at a time, rather than multiple lines at a time.
-- - fixed bug where it could *randomly* eat a character of a line, and not spit it up like it's supposed to
+  - fixed bug where it could *randomly* eat a character of a line, and not spit it up like it's supposed to
 
 
 ---
