@@ -1,10 +1,11 @@
 #pragma once
 
 class QUESTION;
-class Demographic;
+class DEMOGRAPHIC;
 class RESPONSE;
 class USER;
 class GUID;
+class QUESTION_HISTORY_ENTRY;
 
 class GUID
 {
@@ -17,7 +18,7 @@ public:
 class QUESTION
 {
 	/**
-		All memory allocation is handled by other sections - Demographic pointers
+		All memory allocation is handled by other sections - DEMOGRAPHIC pointers
 		are pointers to a demographic held in storage by something else.
 	*/
 	public:
@@ -27,19 +28,19 @@ class QUESTION
 	int requested_responses;
 	int current_responses;
 	unsigned int target_demographic;
-	Demographic *demo;
+	DEMOGRAPHIC *demo;
 	
 	QUESTION();
 	~QUESTION(){}
 	
-	bool fits(Demographic &dem);
+	bool fits(DEMOGRAPHIC &dem);
 	bool fits(USER &usr);
 };
 
 
 
 //Still under construction
-class Demographic
+class DEMOGRAPHIC
 {
 	/**
 		Easiest way to compare demographics is to abstract them into numbers.
@@ -52,19 +53,19 @@ class Demographic
 			in the database and communication between the people working on the database.
 			
 		For now, I will implement a temporary cursory comparison function and craft a
-		better one once the Demographic architecture is more settled.
+		better one once the DEMOGRAPHIC architecture is more settled.
 	*/
 public:
 	unsigned int demographic_id;
 	int fields[MAX_DEM_FIELDS];///MAX_DEM_FIELDS is defined in defs.hpp
 	
-	Demographic(){memset(fields, 0, sizeof(fields)); demographic_id = 0;}
-	~Demographic(){}
+	DEMOGRAPHIC(){memset(fields, 0, sizeof(fields)); demographic_id = 0;}
+	~DEMOGRAPHIC(){}
 	
-	bool fits(Demographic &dem);
+	bool fits(DEMOGRAPHIC &dem);
 	bool fits(USER &usr);
 	bool fits(QUESTION &quest);
-	bool tempFits(Demographic &dem);
+	bool tempFits(DEMOGRAPHIC &dem);
 };
 
 
@@ -73,13 +74,14 @@ class USER
 	/**
 		A user has a guid, and a demographic
 		
-		All memory allocation is handled by other sections - Demographic pointers
+		All memory allocation is handled by other sections - DEMOGRAPHIC pointers
 		are pointers to a demographic held in storage by something else.
 	*/
 	
 public:
 	GUID guid;
-	Demographic *demo;
+	DEMOGRAPHIC *demo;
+	std::chrono::time_point last_activity;
 	bool matches(GUID &uid);
 	
 	USER();
@@ -97,5 +99,12 @@ class RESPONSE
 {
 public:
 	std::string response;
+	GUID guid;
+};
+
+
+class QUESTION_HISTORY_ENTRY
+{
+	unsigned int question_id;
 	GUID guid;
 };

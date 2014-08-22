@@ -28,7 +28,7 @@ GUID& GUID::operator=(GUID &uid)
 	QUESTION
 */
 
-bool QUESTION::fits(Demographic &dem)
+bool QUESTION::fits(DEMOGRAPHIC &dem)
 {
 	if (demo != NULL)
 	{
@@ -49,10 +49,10 @@ bool QUESTION::fits(USER &usr)
 */
 
 /**
-	Demographic
+	DEMOGRAPHIC
 */
 
-bool Demographic::tempFits(Demographic &dem)
+bool DEMOGRAPHIC::tempFits(DEMOGRAPHIC &dem)
 {
 	for(int i = 0; i < MAX_DEM_FIELDS; i++)
 	{
@@ -68,12 +68,12 @@ bool Demographic::tempFits(Demographic &dem)
 	return true;
 }
 
-bool Demographic::fits(Demographic &dem)
+bool DEMOGRAPHIC::fits(DEMOGRAPHIC &dem)
 {
 	return tempFits(dem);
 }
 
-bool Demographic::fits(USER &usr)
+bool DEMOGRAPHIC::fits(USER &usr)
 {
 	if (usr.demo != NULL)
 	{
@@ -82,7 +82,7 @@ bool Demographic::fits(USER &usr)
 	return true;
 }
 
-bool Demographic::fits(QUESTION &quest)
+bool DEMOGRAPHIC::fits(QUESTION &quest)
 {
 	if (quest.demo != NULL)
 	{
@@ -93,7 +93,7 @@ bool Demographic::fits(QUESTION &quest)
 
 
 /**
-	end Demographic
+	end DEMOGRAPHIC
 */
 /**
 	USER
