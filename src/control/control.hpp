@@ -17,6 +17,7 @@ public:
 	int mysql_port;
 	
 	sock_int dirty_sock;
+	scheduler dirty_scheduler;
 	//sock_int mysql_server_port; //unsure about this
 	
 	config configuration;

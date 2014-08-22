@@ -1,11 +1,40 @@
 #pragma once
 
+/**
+		This should produce a uniform output in order to provide uniform input for 
+		the dirty_scheduler.  This is basically a mapping from the database to the
+		cache.
+		
+		************************
+		** connection process **
+		************************
+				|
+				V
+		******************************
+		** f(MYSQL_DATA_STRUCTURES) **
+		******************************
+				|
+				V
+		*********************
+		** dirty_scheduler **
+		*********************
+				|
+				V
+		*****************
+		** dirty_cache **
+		*****************
+*/
+
+
 class QUESTION;
 class DEMOGRAPHIC;
 class RESPONSE;
 class USER;
 class GUID;
+
 class QUESTION_HISTORY_ENTRY;
+typedef QUESTION_HISTORY_ENTRY QUESTION_RET; ///QUESTION_RET is a duplicate class for returning to calling service
+											 ///contains question_id and guid
 
 class GUID
 {
@@ -108,3 +137,5 @@ class QUESTION_HISTORY_ENTRY
 	unsigned int question_id;
 	GUID guid;
 };
+
+
