@@ -31,10 +31,19 @@ class DEMOGRAPHIC;
 class RESPONSE;
 class USER;
 class GUID;
+class ATTRIBUTE;
 
 class QUESTION_HISTORY_ENTRY;
 typedef QUESTION_HISTORY_ENTRY QUESTION_RET; ///QUESTION_RET is a duplicate class for returning to calling service
 											 ///contains question_id and guid
+
+class ATTRIBUTE
+{
+	unsigned int row;
+	unsigned int col;
+	std::string val;
+	std::string table;
+};
 
 class GUID
 {
@@ -110,7 +119,7 @@ class USER
 public:
 	GUID guid;
 	DEMOGRAPHIC *demo;
-	std::chrono::time_point last_activity;
+	std::chrono::time_point<std::chrono::system_clock> last_activity;
 	bool matches(GUID &uid);
 	
 	USER();

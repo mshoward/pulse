@@ -26,4 +26,11 @@ class MYSQL_Int
 		** dirty_cache **
 		*****************
 	*/
+	
+	std::string ip;
+	
+	int fillStructure(std::vector *send_to);
+	MYSQL *database_handle;
+	
+	
 };

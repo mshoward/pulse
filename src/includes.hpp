@@ -21,3 +21,9 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <netdb.h> 
+
+///mysql interfacing
+#include <mysql.h>
+#include <my_global.h>
+#include <my_sys.h>
+#include <m_string.h>

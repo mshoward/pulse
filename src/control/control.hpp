@@ -28,5 +28,9 @@ public:
 	int init();
 	bool dirty_sock_connected();
 	std::string Next_dirty_sock_line();
+	/**
+		FUNCTION A:
+			takes the first item on dirty_scheduler return_queue and sends it to 
+	*/
 	
 };//replace control.hpp with this declaration
